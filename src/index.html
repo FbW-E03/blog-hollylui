@@ -4,33 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/main.css" />
     <title>Holly's Blog | Home</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light container">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Logo</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
+    <!-- nav -->
+
+    <nav class="container-sm">
+      <!-- hamburger-->
+      <div class="dropdown d-md-none">
+        <a
+          class="nav-link"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
           aria-expanded="false"
-          aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">About</a>
-            <a class="nav-link" href="#">Contact</a>
-          </div>
-        </div>
+          &#9776;
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="./index.html">Home</a></li>
+          <li><a class="dropdown-item" href="#about">About</a></li>
+          <li><a class="dropdown-item" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- navbar -->
+
+      <div class="d-none d-md-block">
+        <a href="./index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div>
+        <img
+          src="./images/social_media/facebook_black_64x64.png"
+          alt="Facebook"
+        />
+        <img src="./images/social_media/ig_black_64x64.png" alt="Instagram" />
+        <img
+          src="./images/social_media/pinterest_black_64x64.png"
+          alt="Pinterest"
+        />
+        <img
+          src="./images/social_media/twitter_black_64x64.png"
+          alt="Twitter"
+        />
       </div>
     </nav>
+
+    <!-- header -->
+    <header class="container-sm">
+      <span class="logo-outline">
+        <span class="logo">itmb</span>
+      </span>
+      <h1 class="mb-0">i.t.m.b.</h1>
+      <p class="mb-0">A blog of a mom and for moms</p>
+    </header>
+
+    <!-- main -->
     <!-- social media: https://www.iconfinder.com/social-media-icons -->
     <!-- Custom scripts, edit above this line -->
     <script

@@ -1,5 +1,12 @@
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./mixin";
+@import "./variables";
+
+// font type
+// font-family: 'Karla', sans-serif;
+// font-family: 'Nanum Myeongjo', serif;
+// font-family: 'Roboto Slab', serif;
 
 :root {
   font-size: 62.5%;
@@ -9,4 +16,81 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: $body-bg;
+}
+
+// navbar --------------------------------
+
+nav {
+  @include nav-position;
+  padding: $nav-padding;
+
+  a {
+    text-decoration: $nav-font-style;
+    text-transform: $nav-font-uppercase;
+    font-size: $nav-font-size;
+    color: $nav-font-color;
+    padding: $nav-font-padding;
+    font-weight: lighter;
+
+    &:hover {
+      color: $nav-font-hover;
+    }
+  }
+
+  img {
+    width: $nav-img-width;
+    padding: $nav-img-padding;
+  }
+
+  .nav-link {
+    color: $nav-font-color;
+
+    &:hover {
+      color: $nav-font-hover;
+    }
+  }
+}
+
+// header ----------------------------
+header {
+  @include header-center;
+
+  .logo-outline {
+    width: $logo-outer-w;
+    height: $logo-outer-h;
+    background-color: $logo-outer-bg;
+    border-radius: $logo-br;
+    border: $logo-outer-border;
+    text-align: $logo-position;
+    line-height: $logo-outer-line-heigh;
+  }
+
+  .logo {
+    width: $logo-w;
+    height: $logo-h;
+    line-height: $logo-line-heigh;
+    font-size: $logo-font-size;
+    color: $logo-color;
+    background-color: $logo-bg;
+    border-radius: $logo-br;
+    text-align: $logo-position;
+    border: $logo-border;
+  }
+
+  h1 {
+    font-size: $h1-font-size;
+    color: $h1-font-color;
+    font-family: $h1-font-family;
+    text-transform: $h1-font-uppercase;
+  }
+
+  p {
+    font-size: $header-p-font-size;
+    letter-spacing: $header-p-letter-space;
+  }
 }
