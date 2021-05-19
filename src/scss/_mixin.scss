@@ -4,8 +4,13 @@
   justify-content: space-between;
 }
 
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin header-center {
-  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
