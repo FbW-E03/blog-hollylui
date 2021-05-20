@@ -125,32 +125,90 @@ section {
 }
 // blogs
 
-div[class="col"] {
-  @include blog-card;
+.blog {
+  margin: $blog-margin;
 
-  a {
-    text-decoration: $blog-a-link;
-    color: $blog-a-link-color;
-    &:hover {
-      text-decoration: $blog-a-hover;
-      text-decoration-color: $blog-a-hover-color;
-      text-underline-position: $blog-a-underline-po;
-      text-decoration-thickness: $blog-a-underline-thick;
-    }
+  div[class="col"] {
+    @include blog-card;
+    
 
-    img {
-      @include blog-image;
-
+    a {
+      text-decoration: $blog-a-link;
+      color: $blog-a-link-color;
       &:hover {
-        filter: grayscale($blog-img-blur-hover);
-        transform: scale($blog-img-scale);
-        transition-duration: $blog-img-duration;
+        text-decoration: $blog-a-hover;
+        text-decoration-color: $blog-a-hover-color;
+        text-underline-position: $blog-a-underline-po;
+        text-decoration-thickness: $blog-a-underline-thick;
+      }
+
+      img {
+        @include image(
+          $blog-img-w,
+          $blog-img-blur,
+          $blog-img-origin,
+          $blog-img-transition
+        );
+
+        &:hover {
+          filter: grayscale($blog-img-blur-hover);
+          transform: scale($blog-img-scale);
+          transition: $blog-img-transition;
+       
+        }
+      }
+
+      h2 {
+        font-size: $blog-h2-font-size;
+        margin: $blog-h2-margin;
       }
     }
 
-    h2 {
-      font-size: $blog-h2-font-size;
-      margin: $blog-h2-margin;
+    p {
+      text-overflow: $blog-p-overflow;
+      text-align: $blog-p-align;
+    }
+  }
+}
+
+// Side section ----------------------
+
+.about {
+  margin: $side-margin;
+  padding: $side-pad;
+  border: $side-border;
+  @include flex-center;
+  flex-direction: column;;
+  
+  h3 {
+    text-align: $side-h3-align;
+    font-size: $side-h3-font-size;
+  }
+
+  p {
+    text-align: $side-p-align;
+    font-size: $side-p-font-size;
+    padding: $side-p-pad;
+  }
+  
+  .carousel-item{
+    transition: transform 5s ease;
+  }
+
+}
+
+// in case you miss section -----------
+.miss {
+  .col {
+    a {
+      img {
+        @include image(
+          $miss-img-w,
+          $miss-img-blur,
+          $miss-img-scale,
+          $miss-img-duration
+        );
+      }
     }
   }
 }

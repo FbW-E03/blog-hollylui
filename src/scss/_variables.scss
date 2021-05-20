@@ -50,9 +50,10 @@ $sub-menu-color: #686868;
 
 // blog --------------------------------
 
-$blog-card-margin: 5px 0;
+$blog-margin: 10px 0;
+$blog-w: 30%;
 
-$blog-h2-font-size: 2.5rem;
+$blog-h2-font-size: 2rem;
 $blog-h2-margin: 5px 0;
 
 $blog-p-font-size: 1.5rem;
@@ -66,8 +67,31 @@ $blog-a-hover-color: red;
 $blog-a-underline-po: under;
 $blog-a-underline-thick: 4px;
 
-$blog-img-blur: 60%;
+$blog-img-w: 100%;
+$blog-img-blur: 80%;
 $blog-img-blur-hover: 0%;
 $blog-img-scale: 1.05;
 $blog-img-origin: 1;
-$blog-img-duration: 1s;
+$blog-img-transition: transform 1s ease-in-out;
+
+$blog-p-overflow: ellipsis;
+
+// Side section ----------
+$side-h3-align: center;
+$side-h3-font-size: 1.5rem;
+
+$side-p-align: center;
+$side-p-font-size: 1.4rem;
+$side-p-pad: 10px 10px;
+
+$side-margin: 20px;
+$side-pad:  20px;
+$side-border: 1px solid #e2e2e2;
+
+
+
+// miss section------------------
+$miss-img-w: 90%;
+$miss-img-blur: 0%;
+$miss-img-scale: 1;
+$miss-img-duration: 0;

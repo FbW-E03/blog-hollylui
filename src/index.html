@@ -11,6 +11,44 @@
     />
     <link rel="stylesheet" href="styles/main.css" />
     <title>i.t.b. | Home</title>
+
+    <!-- Script to link to other html -->
+    <!-- source from https://github.com/LexmarkWeb/csi.js/blob/master/README.md -->
+    <script>
+      window.onload = function() {var elements = document.getElementsByTagName('*'),i;
+	      for (i in elements) {
+		      if (elements[i].hasAttribute && elements[i].hasAttribute('data-include')) {
+			      fragment(elements[i], elements[i].getAttribute('data-include'));
+		      }
+	      }
+	      function fragment(el, url) {
+		      var localTest = /^(?:file):/,xmlhttp = new XMLHttpRequest(),status = 0;
+
+		      xmlhttp.onreadystatechange = function() {
+			      /* if we are on a local protocol, and we have response text, we'll assume* things were sucessful */
+			    if (xmlhttp.readyState == 4) {
+				    status = xmlhttp.status;
+			    }
+			    if (localTest.test(location.href) && xmlhttp.responseText) {
+				    status = 200;
+			    }
+			    if (xmlhttp.readyState == 4 && status == 200) {
+				    el.outerHTML = xmlhttp.responseText;
+			    }
+		    }
+
+		    try { 
+			    xmlhttp.open("GET", url, true);
+			    xmlhttp.send();
+		    } 
+        catch(err) {
+			  /* todo catch error */
+		    }
+	    }
+      }
+    </script>
+
+
   </head>
   <body>
     <!-- nav -->
@@ -178,64 +216,46 @@
       <!-- blog section -->
       <section class="blog">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-8">
+          <div class="row  justify-content-center">
+            
+            <!-- link to blog.html -->
+          <div data-include="blog.html"></div>
 
-              <div class="row row-cols-md-3 row-cols-1">
-                <!-- blog1 -->
-                <div class="col">
-                  <a href="#" target="_blank"
-                  ><img src="./images/card-images/autumn-in-kirchheim.webp" alt=""
-                  /></a>
-
-                  <a href="#" target="_blank"><h2>Title</h2></a>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, illo. Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Minima, illo.
-                </p>
-                </div>
-                <!-- blog 2 -->
-                <div class="col">
-                  <a href="#" target="_blank"
-                  ><img src="./images/card-images/autumn-in-kirchheim.webp" alt=""
-                  /></a>
-
-                  <a href="#" target="_blank"><h2>Title</h2></a>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, illo. Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Minima, illo.
-                </p>
-                </div>
-                <!-- blog 3 -->
-                <div class="col">
-                  <a href="#" target="_blank"
-                  ><img src="./images/card-images/autumn-in-kirchheim.webp" alt=""
-                  /></a>
-                  <a href="#" target="_blank"><h2>Title</h2></a>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, illo. Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Minima, illo.
-                </p>
-                </div>
-                <!-- blog end -->
-              </div>
-            </div>
-
-
-
-
-
-
-            <!-- right side -->
-
-            <div class="col-2">
-              <div class="row row-cols-1">
-                <div>
+            <!-- Side section -->
+            <div class="col-2 d-none d-md-block">
+              <div class="row row-cols-1 g-5">
+                <div class="about">
                   <h3>About me</h3>
+
+                  <!-- carousel start-->
+
+                  <div id="carouselExampleSlidesOnly" class="carousel slide w-100  " data-bs-ride="carousel">
+                    <div class="carousel-inner ">
+                      <div class="carousel-item active">
+                        <img src="./images/about_me/aboutme1.jpg" class="d-block w-100 " alt="Face with mask">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/about_me/aboutme2.jpg" class="d-block w-100 " alt="Work with computer">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/about_me/aboutme3.jpg" class="d-block w-100 " alt="Cleaning">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/about_me/aboutme4.jpg" class="d-block w-100 " alt="Tide up the toys">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/about_me/aboutme5.jpg" class="d-block w-100 h-100 " alt="Shopping">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/about_me/aboutme6.jpg" class="d-block w-100 " alt="Becoming fatter">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- carousel end -->
+
                   <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, illo. Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Minima, illo.
-                </p>
+                  I'm Holly. I come from Hong Kong and I am a mom with 6 years old girl. Also I am studying Web Development in DCI and would like to become a Web Developer one day. Here is a blog which I shared my so-called "failure experience" on cooking, with kids, etc.
+                  </p>
                 </div>
                 <div>
                   <h3>Contact</h3>
@@ -248,7 +268,43 @@
           </div>
         </div>
       </section>
+
+      <!-- Miss articles section -->
+
+      <section class="miss ">
+        <div class="container d-none d-md-block">
+          <div class="row justify-content-center">
+            <div class="col">
+              <a href="#" target="_blank"
+                  ><img src="./images/card-images/blog3.webp" alt=""
+                  /></a>
+                  <h4>Black Bull 黑牛</h2>
+            </div>
+            <div class="col">
+              <a href="#" target="_blank"
+                  ><img src="./images/card-images/blog3.webp" alt=""
+                  /></a>
+                  <h4>Chicken Dumplings 雞肉餃子</h2>
+            </div>
+            <div class="col">
+              <a href="#" target="_blank"
+                  ><img src="./images/card-images/blog3.webp" alt=""
+                  /></a>
+                  <h4>Braised Pork with Brussels Sprout 椰菜仔炆肥豬肉</h2>
+            </div>
+            <div class="col">
+              <a href="#" target="_blank"
+                  ><img src="./images/card-images/blog3.webp" alt=""
+                  /></a>
+                  <h4>Potato Rice 薯仔飯</h2>
+            </div>
+            
+          </div>
+        </div>
+      </section>
     </main>
+
+<div data-include="demo.html"></div>
 
     <!-- script section -->
     <script
