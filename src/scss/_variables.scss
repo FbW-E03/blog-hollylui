@@ -33,11 +33,17 @@ $header-p-letter-space: 0.3rem;
 
 $logo-outer-w: 55px;
 $logo-outer-h: 55px;
+$logo-outer-margin: 10px 0;
 
 $logo-w: 45px;
 $logo-h: 45px;
-$logo-font-size: 1.5rem;
+$logo-font-size: 2rem;
 $logo-br: 50%;
 $logo-bg: #fff0f2;
 $logo-color: #686868;
 $logo-border: 2px solid #686868;
+
+// sub-menu----------------------------
+$sub-menu-font-size: 1.5rem;
+$sub-menu-margin: 0 10px;
+$sub-menu-color: #686868;

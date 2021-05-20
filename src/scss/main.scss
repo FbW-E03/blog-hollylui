@@ -64,13 +64,14 @@ header {
   padding: $header-pad;
 
   &,
-  div {
+  section {
     @include header-center;
   }
 
   .logo-outline {
     width: $logo-outer-w;
     height: $logo-outer-h;
+    margin: $logo-outer-margin;
   }
 
   .logo {
@@ -98,5 +99,18 @@ header {
   p {
     font-size: $header-p-font-size;
     letter-spacing: $header-p-letter-space;
+  }
+}
+
+// main ----------------------------------
+
+// sub-menu
+section {
+  @include flex-center;
+
+  div[class^="dropdown"] {
+    a {
+      @include sub-menu;
+    }
   }
 }
