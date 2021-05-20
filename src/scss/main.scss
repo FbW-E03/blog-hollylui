@@ -114,3 +114,43 @@ section {
     }
   }
 }
+
+// cards
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "left left right";
+  background-color: #2196f3;
+  padding: 10px;
+}
+// blogs
+
+div[class="col"] {
+  @include blog-card;
+
+  a {
+    text-decoration: $blog-a-link;
+    color: $blog-a-link-color;
+    &:hover {
+      text-decoration: $blog-a-hover;
+      text-decoration-color: $blog-a-hover-color;
+      text-underline-position: $blog-a-underline-po;
+      text-decoration-thickness: $blog-a-underline-thick;
+    }
+
+    img {
+      @include blog-image;
+
+      &:hover {
+        filter: grayscale($blog-img-blur-hover);
+        transform: scale($blog-img-scale);
+        transition-duration: $blog-img-duration;
+      }
+    }
+
+    h2 {
+      font-size: $blog-h2-font-size;
+      margin: $blog-h2-margin;
+    }
+  }
+}

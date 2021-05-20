@@ -21,7 +21,25 @@
 }
 
 @mixin sub-menu {
-  margin: $sub-menu-margin;
+  padding: $sub-menu-pad;
   color: $sub-menu-color;
   font-size: $sub-menu-font-size;
+}
+
+// blog -------------------------
+
+@mixin blog-card {
+  margin: $blog-card-margin;
+  font-size: $blog-p-font-size;
+  text-align: $blog-p-align;
+}
+
+@mixin name {
+}
+
+@mixin blog-image {
+  width: 100%;
+  filter: grayscale($blog-img-blur);
+  transform: scale($blog-img-origin);
+  transition-duration: $blog-img-duration;
 }

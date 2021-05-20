@@ -45,5 +45,29 @@ $logo-border: 2px solid #686868;
 
 // sub-menu----------------------------
 $sub-menu-font-size: 1.5rem;
-$sub-menu-margin: 0 10px;
+$sub-menu-pad: 5px 15px;
 $sub-menu-color: #686868;
+
+// blog --------------------------------
+
+$blog-card-margin: 5px 0;
+
+$blog-h2-font-size: 2.5rem;
+$blog-h2-margin: 5px 0;
+
+$blog-p-font-size: 1.5rem;
+$blog-p-align: justify;
+$blog-p-pad: 0 5px;
+
+$blog-a-link: none;
+$blog-a-link-color: black;
+$blog-a-hover: underline;
+$blog-a-hover-color: red;
+$blog-a-underline-po: under;
+$blog-a-underline-thick: 4px;
+
+$blog-img-blur: 60%;
+$blog-img-blur-hover: 0%;
+$blog-img-scale: 1.05;
+$blog-img-origin: 1;
+$blog-img-duration: 1s;
