@@ -44,6 +44,7 @@ $logo-color: #686868;
 $logo-border: 2px solid #686868;
 
 // sub-menu----------------------------
+$sub-menu-bg: #fcfcfc;
 $sub-menu-font-size: 1.5rem;
 $sub-menu-pad: 5px 15px;
 $sub-menu-color: #686868;
@@ -51,7 +52,7 @@ $sub-menu-color: #686868;
 // blog --------------------------------
 
 $blog-margin: 10px 0;
-$blog-w: 30%;
+$blog-w: 100%;
 
 $blog-h2-font-size: 2rem;
 $blog-h2-margin: 5px 0;
@@ -70,25 +71,31 @@ $blog-a-underline-thick: 4px;
 $blog-img-w: 100%;
 $blog-img-blur: 80%;
 $blog-img-blur-hover: 0%;
-$blog-img-scale: 1.05;
+$blog-img-scale: 1.025;
 $blog-img-origin: 1;
-$blog-img-transition: transform 1s ease-in-out;
+$blog-img-transition: all 1s ease-in-out;
 
-$blog-p-overflow: ellipsis;
-
-// Side section ----------
+// about me ----------------
 $side-h3-align: center;
 $side-h3-font-size: 1.5rem;
 
 $side-p-align: center;
 $side-p-font-size: 1.4rem;
-$side-p-pad: 10px 10px;
+$side-p-pad: 0px 5px;
+$side-p-abbr-color:red;
+$side-abbr-thickness: 1.5px;
 
 $side-margin: 20px;
 $side-pad:  20px;
 $side-border: 1px solid #e2e2e2;
 
-
+$about-h4-font-size:1.6rem;
+$about-h4-transform: capitalize;
+$about-h4-font: 'Nanum Myeongjo', serif;
+$about-h4-pad: 20px 0;
+$about-h4-color: #c2a500;
+$about-h4-align: center;
+$about-h4-weight:700;
 
 // miss section------------------
 $miss-img-w: 90%;

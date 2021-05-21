@@ -40,12 +40,10 @@ nav {
     &:hover {
       color: $nav-font-hover;
     }
+    
   }
 
-  img {
-    width: $nav-img-width;
-    padding: $nav-img-padding;
-  }
+  
 
   .nav-link {
     color: $nav-font-color;
@@ -107,8 +105,7 @@ header {
 // sub-menu
 section {
   @include flex-center;
-
-  div[class^="dropdown"] {
+    div[class^="dropdown"] {
     a {
       @include sub-menu;
     }
@@ -128,19 +125,20 @@ section {
 .blog {
   margin: $blog-margin;
 
-  div[class="col"] {
-    @include blog-card;
-    
+  div[class="col-10"]{
+    div{
 
-    a {
+      a {
       text-decoration: $blog-a-link;
       color: $blog-a-link-color;
-      &:hover {
-        text-decoration: $blog-a-hover;
-        text-decoration-color: $blog-a-hover-color;
-        text-underline-position: $blog-a-underline-po;
-        text-decoration-thickness: $blog-a-underline-thick;
-      }
+        &:hover {
+          text-decoration: $blog-a-hover;
+          text-decoration-color: $blog-a-hover-color;
+          text-underline-position: $blog-a-underline-po;
+          text-decoration-thickness: $blog-a-underline-thick
+
+        }
+      } 
 
       img {
         @include image(
@@ -150,26 +148,31 @@ section {
           $blog-img-transition
         );
 
-        &:hover {
-          filter: grayscale($blog-img-blur-hover);
-          transform: scale($blog-img-scale);
-          transition: $blog-img-transition;
-       
-        }
+          &:hover {
+            filter: grayscale($blog-img-blur-hover);
+            transition: $blog-img-transition;
+
+          }
       }
+
 
       h2 {
         font-size: $blog-h2-font-size;
         margin: $blog-h2-margin;
       }
-    }
 
-    p {
-      text-overflow: $blog-p-overflow;
-      text-align: $blog-p-align;
+
+      p {
+        font-size: $blog-p-font-size;
+        text-align: $blog-p-align;
+      }
+
     }
   }
-}
+
+
+ }
+
 
 // Side section ----------------------
 
@@ -186,16 +189,34 @@ section {
   }
 
   p {
+ 
     text-align: $side-p-align;
     font-size: $side-p-font-size;
     padding: $side-p-pad;
   }
+
+  abbr{
+    text-decoration-color: $side-p-abbr-color;
+    text-decoration-thickness: $side-abbr-thickness;
+  }
   
+    
   .carousel-item{
     transition: transform 5s ease;
   }
 
+  h4{
+    font-size: $about-h4-font-size;
+    font-family: $about-h4-font;
+    font-weight: $about-h4-weight;
+    text-transform: $about-h4-transform;
+    padding: $about-h4-pad;
+    color: $about-h4-color;
+    text-align: $about-h4-align;
+  }
 }
+
+
 
 // in case you miss section -----------
 .miss {
