@@ -6,7 +6,7 @@
 // font type
 // font-family: 'Karla', sans-serif;
 // font-family: 'Nanum Myeongjo', serif;
-// font-family: 'Roboto Slab', serif;
+// font-family: 'Newsreader', serif;
 
 :root {
   font-size: 62.5%;
@@ -43,6 +43,10 @@ nav {
     
   }
 
+  img{
+    width: $nav-img-width;
+    padding: $nav-img-padding;
+  }
   
 
   .nav-link {
@@ -103,14 +107,27 @@ header {
 // main ----------------------------------
 
 // sub-menu
-section {
-  @include flex-center;
-    div[class^="dropdown"] {
-    a {
-      @include sub-menu;
+.sticky-top{
+  background-color: #C8E7E1;
+
+    div[class="container"] {
+
+      @include flex-center;
+
+      div[class^="dropdown"] {
+
+        a {
+          @include sub-menu;
+
+          &:hover{
+          color: $sub-menu-hover-color;
+          }
+        }
+      }
     }
   }
-}
+
+
 
 // cards
 
@@ -125,8 +142,15 @@ section {
 .blog {
   margin: $blog-margin;
 
-  div[class="col-10"]{
+  div[class="col-8"]{
+    .id-top-height{
+      height:$blog-id-h;
+    };
+
+
+
     div{
+      margin: $blog-card-m;
 
       a {
       text-decoration: $blog-a-link;
@@ -135,8 +159,7 @@ section {
           text-decoration: $blog-a-hover;
           text-decoration-color: $blog-a-hover-color;
           text-underline-position: $blog-a-underline-po;
-          text-decoration-thickness: $blog-a-underline-thick
-
+          text-decoration-thickness: $blog-a-underline-thick;
         }
       } 
 
@@ -147,6 +170,7 @@ section {
           $blog-img-origin,
           $blog-img-transition
         );
+        object-fit: cover;
 
           &:hover {
             filter: grayscale($blog-img-blur-hover);
@@ -159,12 +183,20 @@ section {
       h2 {
         font-size: $blog-h2-font-size;
         margin: $blog-h2-margin;
+        font-family: $blog-h2-font-family;
+        font-weight: $blog-h2-weight;
+        line-height: $blog-h2-line-h;
+        color: $blog-h2-color;
       }
 
 
       p {
         font-size: $blog-p-font-size;
         text-align: $blog-p-align;
+        color: $blog-p-color;
+        // letter-spacing: -.5px;
+        // line-height: 20px;
+        // transform: scaleY(1.25)
       }
 
     }
@@ -174,30 +206,49 @@ section {
  }
 
 
-// Side section ----------------------
+// Ride side (rs) section ----------------------
 
+.latest_posts,
+.social,
+.subscribe,
 .about {
-  margin: $side-margin;
-  padding: $side-pad;
-  border: $side-border;
   @include flex-center;
-  flex-direction: column;;
+  margin: $rs-m;
+  border: $rs-border;
+  flex-direction: column;
   
   h3 {
-    text-align: $side-h3-align;
-    font-size: $side-h3-font-size;
+    text-align: $h3-align;
+    font-size: $h3-font-size;
+    text-transform: $h3-transform;
+    color: $h3-color;
+    padding-top: $h3-pt;
   }
 
-  p {
- 
-    text-align: $side-p-align;
-    font-size: $side-p-font-size;
-    padding: $side-p-pad;
+  hr{
+    @include hr-style($hr-border, $hr-color, $hr-h, $hr-w, $hr-mb);
+  }
+  
+  h4{
+    font-size: $h4-font-size;
+    font-family: $h4-font-family;
+    font-weight: $h4-weight;
+    text-transform: $h4-transform;
+    padding: $h4-pad;
+    color: $h4-color;
+    text-align: $h4-align;
+  }
+
+
+  p { 
+    font-size: $rs-p-font-size;
+    text-align: $rs-p-align;
+    
   }
 
   abbr{
-    text-decoration-color: $side-p-abbr-color;
-    text-decoration-thickness: $side-abbr-thickness;
+    text-decoration-color: $rs-p-abbr-color;
+    text-decoration-thickness: $rs-p-abbr-thickness;
   }
   
     
@@ -205,18 +256,66 @@ section {
     transition: transform 5s ease;
   }
 
-  h4{
-    font-size: $about-h4-font-size;
-    font-family: $about-h4-font;
-    font-weight: $about-h4-weight;
-    text-transform: $about-h4-transform;
-    padding: $about-h4-pad;
-    color: $about-h4-color;
-    text-align: $about-h4-align;
-  }
+  
 }
 
+.subscribe{
+  height: $subscribe-h;
+  background-color: $subscribe-bg;
 
+  form{
+    text-align: center;
+    
+
+    input[type="email"]{
+      @include email;
+    
+
+      &:focus{
+        outline: none;
+        background-color: #f3f3f3;
+      }
+    }
+
+    input[type="submit"]{
+      @include submit;
+
+      &:hover{
+        background-color: $sub-btn-hover-bg;
+        color: $sub-btn-hover-color;
+        transition: $sub-btn-transition;
+      
+      }
+    }
+  }
+
+}
+
+.social{
+  height: 150px;
+  
+  div{
+    display: flex;
+  flex-direction: row;
+  a{
+    padding: 10px;
+    img{
+      width: 16px;
+    }
+  }
+}
+}
+
+.latest_posts{
+  div{
+    div{
+      img{
+       width: 50%;
+     }
+    }
+  }
+  
+}
 
 // in case you miss section -----------
 .miss {
@@ -231,5 +330,42 @@ section {
         );
       }
     }
+  }
+}
+
+// Back to top --------------------------
+
+a{
+ 
+  p{
+    font-size: $backtotop-p-font-size;
+    padding:$backtotop-p-pad ;
+  }
+}
+
+
+// footer -------------------------------
+
+footer{
+
+  background:$footer-bg;
+  
+.container{
+  background:$footer-bg;}
+  text-align: center;
+
+  div{
+    padding: $footer-pad;
+    h3{
+    color: white;
+    font-family: $footer-h3-font-family;
+    font-size: $footer-h3-font-size;
+  }
+
+ p{
+    font-size: $footer-p-font-size;
+    color: white;
+    letter-spacing: $footer-p-letter-space;
+  }
   }
 }

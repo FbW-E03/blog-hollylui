@@ -32,12 +32,6 @@
   font-size: $sub-menu-font-size;
 }
 
-// blog -------------------------
-
-@mixin blog-card {
-  width: $blog-w;
-  font-size: $blog-p-font-size;
-}
 
 // image ---------------------
 @mixin image($w, $blur, $scale, $transition) {
@@ -45,4 +39,35 @@
   filter: grayscale($blur);
   transform: scale($scale);
   transition: $transition;
+}
+
+
+// about me ------------------
+
+@mixin hr-style($hr-border, $hr-color, $hr-h, $hr-w, $hr-mb){
+  border:$hr-border;
+  color:$hr-color;
+  height: $hr-h;
+  width: $hr-w;
+  margin-bottom: $hr-mb;
+}
+
+@mixin email{
+  width: $sub-email-w;
+  border: $sub-email-border;
+  height: $sub-email-h;
+  font-size: $sub-email-font-size;
+  margin: $sub-email-m;
+  padding-left: $email-ps;
+
+}
+
+@mixin submit{
+  border: $sub-email-border;
+  height: $sub-email-h;
+  margin: $sub-email-m;
+  font-size: $sub-email-font-size;
+  width: $sub-btn-w;
+  border-radius: $sub-btn-border-radius;
+  transition: $sub-btn-transition;
 }

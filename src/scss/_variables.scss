@@ -45,60 +45,123 @@ $logo-border: 2px solid #686868;
 
 // sub-menu----------------------------
 $sub-menu-bg: #fcfcfc;
+$sub-menu-font-family: "Karla", sans-serif;
 $sub-menu-font-size: 1.5rem;
-$sub-menu-pad: 5px 15px;
-$sub-menu-color: #686868;
+$sub-menu-pad: 8px 15px;
+$sub-menu-color: #4b4b4b;
+$sub-menu-hover-color: red;
+
+$dropdown-box-shadow:red;
 
 // blog --------------------------------
 
 $blog-margin: 10px 0;
-$blog-w: 100%;
 
-$blog-h2-font-size: 2rem;
-$blog-h2-margin: 5px 0;
+$blog-h2-font-size: 2.5rem;
+$blog-h2-margin: 15px 0;
+$blog-h2-color: #b89c00;
+$blog-h2-weight: 500;
+$blog-h2-line-h: 30px;
+$blog-h2-font-family: 'Newsreader', serif;
 
-$blog-p-font-size: 1.5rem;
-$blog-p-align: justify;
+$blog-card-m: 0px 0 0px 0;
+
+$blog-id-h:50px;
+
+
+$blog-p-font-size: 1.6rem;
+$blog-p-align: left;
 $blog-p-pad: 0 5px;
+$blog-p-color: #646464;
+$blog-p-line-h: 30px;
 
 $blog-a-link: none;
 $blog-a-link-color: black;
 $blog-a-hover: underline;
-$blog-a-hover-color: red;
+$blog-a-hover-color: #b89c00;
 $blog-a-underline-po: under;
 $blog-a-underline-thick: 4px;
 
 $blog-img-w: 100%;
-$blog-img-blur: 80%;
+$blog-img-blur: 0.9;
 $blog-img-blur-hover: 0%;
 $blog-img-scale: 1.025;
 $blog-img-origin: 1;
-$blog-img-transition: all 1s ease-in-out;
+$blog-img-transition: all 0.5s ease-in-out;
 
-// about me ----------------
-$side-h3-align: center;
-$side-h3-font-size: 1.5rem;
+// Right side section ----------------
 
-$side-p-align: center;
-$side-p-font-size: 1.4rem;
-$side-p-pad: 0px 5px;
-$side-p-abbr-color:red;
-$side-abbr-thickness: 1.5px;
+$rs-m: 10px;
+$rs-border: 1px solid #e2e2e2;
 
-$side-margin: 20px;
-$side-pad:  20px;
-$side-border: 1px solid #e2e2e2;
 
-$about-h4-font-size:1.6rem;
-$about-h4-transform: capitalize;
-$about-h4-font: 'Nanum Myeongjo', serif;
-$about-h4-pad: 20px 0;
-$about-h4-color: #c2a500;
-$about-h4-align: center;
-$about-h4-weight:700;
+$h3-align: center;
+$h3-font-size: 1.6rem;
+$h3-color: #686868;
+$h3-transform: uppercase;
+$h3-pt:15px;
+
+$rs-p-align: center;
+$rs-p-font-size: 1.4rem;
+$rs-p-abbr-color:#ff0000;
+$rs-p-abbr-thickness: 1.5px;
+
+
+
+$h4-font-size:1.5rem;
+$h4-transform: capitalize;
+$h4-font-family: 'Nanum Myeongjo', serif;
+$h4-pad: 15px 0;
+$h4-color: #c2a500;
+$h4-align: center;
+$h4-weight:700;
+
+$hr-border: none;
+$hr-color: red;
+$hr-w: 20%;
+$hr-h: 2px;
+$hr-mb: 15px;
+
+
+// subscribe
+$subscribe-bg: #C8E7E1;
+$subscribe-h: 280px;
+
+$sub-email-w: 95%;
+$sub-email-h: 25px;
+$sub-email-m: 10px 0;
+$sub-email-border: none;
+$sub-email-font-size: 1.4rem;
+
+$email-ps: 4px;
+
+$sub-btn-w: 60%;
+$sub-btn-border-radius: 5px;
+$sub-btn-hover-color: #ffffff;
+$sub-btn-hover-bg: #c2a500;
+$sub-btn-transition: all 1s ease-in-out;
+
 
 // miss section------------------
 $miss-img-w: 90%;
 $miss-img-blur: 0%;
 $miss-img-scale: 1;
 $miss-img-duration: 0;
+
+
+// Back to top ------------------
+$backtotop-p-font-size: 4rem;
+$backtotop-p-pad: 40px 0;
+
+
+
+// footer ------------------------
+$footer-mt: 50px;
+$footer-bg:#000000;
+$footer-pad:50px 0px;
+
+
+$footer-h3-font-family:"Nanum Myeongjo", serif;
+$footer-h3-font-size: 8rem;
+$footer-p-font-size: 1.5rem;
+$footer-p-letter-space: 0.3rem;

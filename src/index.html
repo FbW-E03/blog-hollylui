@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head >
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <!-- use google font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Newsreader:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    
+    <!-- style sheet -->
     <link rel="stylesheet" href="styles/main.css" />
     <title>i.t.b. | Home</title>
 
-    <!-- Script to link blog.html to index.html -->
-    <script src="./scripts/blog.js"></script>
+    <!-- Script to link cards.html to index.html -->
+    <script src="./scripts/cards.js"></script>
+
   </head>
 
-  <body>
+  <body id="backtotop">
+
     <!-- nav -->
 
     <nav class="container">
@@ -35,6 +37,7 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" href="./index.html">Home</a></li>
+          <li><a class="dropdown-item" href="./blog.html">Blog</a></li>
           <li><a class="dropdown-item" href="#about">About</a></li>
           <li><a class="dropdown-item" href="#contact">Contact</a></li>
         </ul>
@@ -44,6 +47,7 @@
 
       <div class="d-none d-md-block">
         <a href="./index.html">Home</a>
+        <a href="./blog.html">Blog</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
@@ -81,119 +85,133 @@
     <!-- main -->
     <main>
       <!-- sub-menu -->
-      <section class="container">
-        <!-- sub menu homemade food -->
-        <div class="dropdown d-none d-md-block">
-          <a
-            class="btn dropdown-toggle"
-            href="#"
-            role="button"
-            id="dropdownMenuLink"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Homemade foods
-          </a>
+      <section class="sticky-top">
+        <div class="container">
 
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          <!-- homemade food -->
+          <div class="dropdown d-none d-md-block">
+            <a
+              class="btn dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Homemade foods
+            </a>
+  
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#softboiledegg">Soft boiled egg</a></li>
+              <li><a class="dropdown-item" href="#breadWithSaltedBeanCurd">Bread with salted bean curd</a></li>
+              <li><a class="dropdown-item" href="#friedPotatoes">Fried Potatoes</a></li>
+              <li><a class="dropdown-item" href="#stirFriedThreeVegetables">Stir Fried Three Vegetables</a></li>
+              <li><a class="dropdown-item" href="#koreanFriedChicken">Korean Fried Chicken</a></li>
+              <li><a class="dropdown-item" href="#friedCauliflowerAndPopupDish">Fried Cauliflower + Popup Dish</a></li>
+              <li><a class="dropdown-item" href="#chenpi">Chenpi</a></li>
+            </ul>
+          </div>
+
+          
+          <!-- hiking with kids -->
+          <div class="dropdown d-none d-md-block">
+            <a
+              class="btn dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Hiking with kids
+            </a>
+  
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#herrenbachstausee">Herrenbach stausee</a></li>
+              <li><a class="dropdown-item" href="#oberhalb">Oberhalb des Mönchskingenbach</a></li>
+              <li><a class="dropdown-item" href="#sinneswandel">Sinneswandel Bad Boll</a></li>
+            </ul>
+          </div>
+
+          <!-- me-time -->
+          <div class="dropdown d-none d-md-block">
+            <a
+              class="btn dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              ME time
+            </a>
+  
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#onemanmarshmallow">One man marshmallow</a></li>
+              <li><a class="dropdown-item" href="#japaneseSnack">Japanese Snack</a></li>
+              
+            </ul>
+          </div>
+
+          <!-- Gardening -->
+          <div class="dropdown d-none d-md-block">
+            <a
+              class="btn dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Gardening
+            </a>
+  
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              
+              <li><a class="dropdown-item" href="#gaultheriaScheinbeere">Gaultheria | Scheinbeere</a></li>
+              <li><a class="dropdown-item" href="#driedLemon">Dried Lemon</a></li>
+              <li><a class="dropdown-item" href="#fiddleleaffig">Fiddle leaf fig</a></li>
+            </ul>
+          </div>
+  
+          <!-- Parenting -->
+          <div class="dropdown d-none d-md-block">
+            <a
+              class="btn dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Parenting
+            </a>
+  
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#cuttingandpeeling">Cutting and peeling</a></li>
+              <li><a class="dropdown-item" href="#sunshineToast">Sunshine Toast</a></li>
+
+            </ul>
+          </div>
         </div>
-        <!-- sub menu hiking -->
-        <div class="dropdown d-none d-md-block">
-          <a
-            class="btn dropdown-toggle"
-            href="#"
-            role="button"
-            id="dropdownMenuLink"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Hiking with kids
-          </a>
-
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
-        <!-- sub menu me-time -->
-        <div class="dropdown d-none d-md-block">
-          <a
-            class="btn dropdown-toggle"
-            href="#"
-            role="button"
-            id="dropdownMenuLink"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            ME time
-          </a>
-
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
-        <!-- Gardening -->
-        <div class="dropdown d-none d-md-block">
-          <a
-            class="btn dropdown-toggle"
-            href="#"
-            role="button"
-            id="dropdownMenuLink"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Gardening
-          </a>
-
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
-
-        <!-- Parenting -->
-        <div class="dropdown d-none d-md-block">
-          <a
-            class="btn dropdown-toggle"
-            href="#"
-            role="button"
-            id="dropdownMenuLink"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Parenting
-          </a>
-
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
-      </section>
+        </section>
 
       <!-- blog section -->
       <section class="blog">
         <div class="container">
           <div class="row justify-content-center">
             
-            <!-- link to blog.html -->
-          <div data-include="blog.html"></div>
-          <!-- <div data-include="test.html"></div> -->
+            <!-- link to cards.html -->
+          <div data-include="cards.html"></div>
+          
 
             <!-- Side section -->
-            <div class="col-2 d-none d-md-block">
-              <div class="row row-cols-1 g-5">
+            <div class="col-2 d-none d-lg-block">
+              <div class="row row-cols-1">
                 <div class="about">
                   <h3>About me</h3>
+                  
+                  <hr>
 
                   <!-- carousel start-->
 
@@ -220,27 +238,78 @@
                     </div>
                   </div>
                   <!-- carousel end -->
-
-                  <h4>Web Development Student</h4>
+                  
+                  <h4>[Web Development Student]</h4>
+                  
                   <p>
-                  I'm Holly. I come from Hong Kong and I am a mom with a 6 years old girl. Currently I am studying Web Development in <abbr title="Digital Career Institute">DCI</abbr>. <br> <br> Here is my blog where I shared my so-called "failure experience" on cooking, with kids, etc.
+                  I'm Holly. I come from Hong Kong and I am a mom with a kid. Currently I am studying Web Development in <abbr title="Digital Career Institute">DCI</abbr>. <br> <br> Here is my blog where I shared my experience on cooking, with kids, etc.
                   </p>
+                  
                 </div>
-                <div>
-                  <h3>Contact</h3>
-                  <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, illo. Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Minima, illo.
-                </p>
+
+                <!-- Subscribe -->
+                <div class="subscribe">
+                  <h3>Subscribe</h3>
+
+                  <hr>
+
+                  <form action="">
+                    <p>
+                      Subscribe our newsletter to receive updated every moment.
+                    </p>
+  
+                    <label>
+                      <input type="email" id="email" placeholder="Email address" name="email" required>
+                    </label>
+                    
+                    <input type="submit" value="Subscribe">
+                  </form>
+
+                </div>
+
+                <!-- social media -->
+                <div class="social">
+                  <h3>Stay connected</h3>
+                  <hr>
+                  <div>
+                    <a href="#facebook"><img src="./images/social_media/facebook_black_64x64.png" alt="Facebook"></a>
+                    
+                    <a href="#instagram"><img src="./images/social_media/ig_black_64x64.png" alt="Instagram"></a>
+                    
+                    <a href="#pinterest"><img src="./images/social_media/pinterest_black_64x64.png" alt="Pinterest"></a>
+                    
+                    <a href="#twitter"><img src="./images/social_media/twitter_black_64x64.png" alt="Twitter"></a></di>
                 </div>
               </div>
+
+              <!-- latest posts -->
+              <div class="latest_posts">
+                <h3>Latest posts</h3>
+                <hr>
+                <div>
+                  <div>
+                    <img ssrc="./images/card-images/blog14.webp" alt="">
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
           </div>
+        </div>
+      </section>
+
+      <section >
+        <div class="container text-center">
+          <a href="#backtotop"><p>&#9650;</p></a>
         </div>
       </section>
 
       <!-- Miss articles section -->
 
-      <section class="miss ">
+      <!-- <section class="miss ">
         <div class="container d-none d-md-block">
           <div class="row justify-content-center">
             <div class="col">
@@ -270,12 +339,22 @@
             
           </div>
         </div>
-      </section>
+      </section> -->
+
+      <footer>
+        <div class="container">
+          <div>
+            
+            <h3>I.T.B.</h3>
+            <p>A blog of a mom and for moms</p>
+          </di>
+        </div>
+      </footer>
     </main>
 
-<div data-include="demo.html"></div>
 
     <!-- script section -->
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
