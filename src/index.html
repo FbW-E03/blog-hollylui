@@ -13,62 +13,17 @@
     <link rel="stylesheet" href="styles/main.css" />
     <title>i.t.b. | Home</title>
 
-    <!-- Script to link cards.html to index.html -->
-    <script src="./scripts/cards.js"></script>
+    <!-- Script to link other html to index.html -->
+    <script src="./scripts/link-html.js"></script>
 
   </head>
 
   <body id="backtotop">
 
     <!-- nav -->
+    <!-- link to navbar.html -->
+    <div data-include="navbar.html"></div>
 
-    <nav class="container">
-      <!-- hamburger-->
-      <div class="dropdown d-md-none">
-        <a
-          class="nav-link"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          &#9776;
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="./index.html">Home</a></li>
-          <li><a class="dropdown-item" href="./blog.html">Blog</a></li>
-          <li><a class="dropdown-item" href="#about">About</a></li>
-          <li><a class="dropdown-item" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- navbar -->
-
-      <div class="d-none d-md-block">
-        <a href="./index.html">Home</a>
-        <a href="./blog.html">Blog</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <!-- social media pic from: https://www.iconfinder.com/ -->
-      <div>
-        <img
-          src="./images/social_media/facebook_black_64x64.png"
-          alt="Facebook"
-        />
-        <img src="./images/social_media/ig_black_64x64.png" alt="Instagram" />
-        <img
-          src="./images/social_media/pinterest_black_64x64.png"
-          alt="Pinterest"
-        />
-        <img
-          src="./images/social_media/twitter_black_64x64.png"
-          alt="Twitter"
-        />
-      </div>
-    </nav>
 
     <!-- header -->
     <header>
@@ -284,12 +239,29 @@
 
               <!-- latest posts -->
               <div class="latest_posts">
-                <h3>Latest posts</h3>
+                <h3>Popular posts</h3>
                 <hr>
                 <div>
                   <div>
-                    <img ssrc="./images/card-images/blog14.webp" alt="">
+                    <img src="./images/card-images/blog14.webp" alt="One-man marshmallow">
+                    <div>One-Man Marshmallow</div>
                   </div>
+
+                  <div>
+                    <img src="./images/card-images/blog10.webp" alt="Oberhalb des Mönchskingenbach">
+                    <div>Oberhalb des Mönchskingenbach</div>
+                  </div>
+
+                  <div>
+                    <img src="./images/card-images/blog5.webp" alt="Stir Fried Three Vegetables">
+                    <div>Stir Fried Three Vegetables</div>
+                  </div>
+
+                  <div>
+                    <img src="./images/card-images/blog2.webp" alt="Fried Cauliflower + Popup Dish">
+                    <div>Fried Cauliflower + Popup Dish</div>
+                  </div>
+
                 </div>
               </div>
 
@@ -307,39 +279,7 @@
         </div>
       </section>
 
-      <!-- Miss articles section -->
-
-      <!-- <section class="miss ">
-        <div class="container d-none d-md-block">
-          <div class="row justify-content-center">
-            <div class="col">
-              <a href="#" target="_blank"
-                  ><img src="./images/card-images/blog3.webp" alt=""
-                  /></a>
-                  <h4>Black Bull 黑牛</h2>
-            </div>
-            <div class="col">
-              <a href="#" target="_blank"
-                  ><img src="./images/card-images/blog3.webp" alt=""
-                  /></a>
-                  <h4>Chicken Dumplings 雞肉餃子</h2>
-            </div>
-            <div class="col">
-              <a href="#" target="_blank"
-                  ><img src="./images/card-images/blog3.webp" alt=""
-                  /></a>
-                  <h4>Braised Pork with Brussels Sprout 椰菜仔炆肥豬肉</h2>
-            </div>
-            <div class="col">
-              <a href="#" target="_blank"
-                  ><img src="./images/card-images/blog3.webp" alt=""
-                  /></a>
-                  <h4>Potato Rice 薯仔飯</h2>
-            </div>
-            
-          </div>
-        </div>
-      </section> -->
+      
 
       <footer>
         <div class="container">

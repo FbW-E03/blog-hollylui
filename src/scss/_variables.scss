@@ -10,11 +10,11 @@ $nav-font-style: none;
 $nav-font-color: #585858;
 $nav-font-padding: 0 10px;
 $nav-font-weight: 500;
-$nav-font-hover: red;
+$nav-font-hover: #ff0000;
 $nav-font-burger: 1.6rem;
 
-$nav-img-width: 28px;
-$nav-img-padding: 0 6px;
+$nav-img-width: 17px;
+
 
 // header ------------------------------
 $header-h: 300px;
@@ -75,12 +75,12 @@ $blog-p-pad: 0 5px;
 $blog-p-color: #646464;
 $blog-p-line-h: 30px;
 
-$blog-a-link: none;
-$blog-a-link-color: black;
-$blog-a-hover: underline;
-$blog-a-hover-color: #b89c00;
-$blog-a-underline-po: under;
-$blog-a-underline-thick: 4px;
+$blog-a-style: none;
+$blog-a-skip-ink: none;
+$blog-a-color: #b89c00;
+$blog-a-ul-style: underline;
+$blog-a-ul-po: under;
+$blog-a-ul-thick: 4px;
 
 $blog-img-w: 100%;
 $blog-img-blur: 0.9;
@@ -124,7 +124,7 @@ $hr-mb: 15px;
 
 
 // subscribe
-$subscribe-bg: #C8E7E1;
+$subscribe-bg: #c8e7e18f;
 $subscribe-h: 280px;
 
 $sub-email-w: 95%;
@@ -139,15 +139,14 @@ $sub-btn-w: 60%;
 $sub-btn-border-radius: 5px;
 $sub-btn-hover-color: #ffffff;
 $sub-btn-hover-bg: #c2a500;
-$sub-btn-transition: all 1s ease-in-out;
+$sub-btn-transition: all 0.5s ease-in-out;
 
-
-// miss section------------------
-$miss-img-w: 90%;
-$miss-img-blur: 0%;
-$miss-img-scale: 1;
-$miss-img-duration: 0;
-
+// Popular posts
+$pp-color: #c2a500;
+$pp-ul-style: underline;
+$pp-ul-thick: 2px;
+$pp-ul-po: under;
+$pp-skip-ink:none;
 
 // Back to top ------------------
 $backtotop-p-font-size: 4rem;

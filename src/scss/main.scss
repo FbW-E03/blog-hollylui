@@ -45,7 +45,6 @@ nav {
 
   img{
     width: $nav-img-width;
-    padding: $nav-img-padding;
   }
   
 
@@ -153,13 +152,14 @@ header {
       margin: $blog-card-m;
 
       a {
-      text-decoration: $blog-a-link;
-      color: $blog-a-link-color;
+      text-decoration: $blog-a-style;
+      color: $blog-a-color;
+
         &:hover {
-          text-decoration: $blog-a-hover;
-          text-decoration-color: $blog-a-hover-color;
-          text-underline-position: $blog-a-underline-po;
-          text-decoration-thickness: $blog-a-underline-thick;
+          @include a-link(
+            $blog-a-ul-thick $blog-a-ul-style, 
+            $blog-a-ul-po, 
+            $blog-a-skip-ink);
         }
       } 
 
@@ -279,6 +279,7 @@ header {
 
     input[type="submit"]{
       @include submit;
+      transition: $sub-btn-transition;
 
       &:hover{
         background-color: $sub-btn-hover-bg;
@@ -307,31 +308,39 @@ header {
 }
 
 .latest_posts{
+  padding-bottom: 10px;
   div{
     div{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      
+      
       img{
-       width: 50%;
+       width: 40%;
+       padding: 5px 0;
+     }
+
+    div{
+      
+      font-size: 1.3rem;
+       width: 60%;
+       padding-left: 5px;
+       text-align: left;
+       text-overflow: ellipsis;
+
+       &:hover{
+         @include a-link($pp-color $pp-ul-style $pp-ul-thick, $pp-ul-po, $pp-skip-ink);
+       }
+       
      }
     }
   }
   
 }
 
-// in case you miss section -----------
-.miss {
-  .col {
-    a {
-      img {
-        @include image(
-          $miss-img-w,
-          $miss-img-blur,
-          $miss-img-scale,
-          $miss-img-duration
-        );
-      }
-    }
-  }
-}
+
+
 
 // Back to top --------------------------
 

@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+@mixin a-link($text-dec, $text-ul-po, $text-skip-ink){
+  text-decoration: $text-dec;
+  text-underline-position: $text-ul-po;
+  text-decoration-skip-ink: $text-skip-ink;
+}
+
 
 
 // navbar------------------------
@@ -69,5 +75,4 @@
   font-size: $sub-email-font-size;
   width: $sub-btn-w;
   border-radius: $sub-btn-border-radius;
-  transition: $sub-btn-transition;
 }
