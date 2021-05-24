@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <link rel="icon" type="image/png" href="./images/logo_holly.png">
+
     <!-- use google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Newsreader:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
     
     <!-- style sheet -->
     <link rel="stylesheet" href="styles/main.css" />
-    <title>i.t.b. | Home</title>
+    <title>HOLLY | Home</title>
 
     <!-- Script to link other html to index.html -->
     <script src="./scripts/link-html.js"></script>
@@ -26,13 +28,16 @@
 
 
     <!-- header -->
+    <!-- logo source: https://www.pngwing.com/en/free-png-vihcj -->
     <header>
       <section class="container">
-        <span class="logo-outline">
-          <span class="logo">itb</span>
-        </span>
-        <p class="mb-0">i tried but...</p>
-        <h1 class="mb-0">i.t.b.</h1>
+        <div>
+          <span>ESTD</span><img src="./images/logo_holly.png" alt="Logo">
+          <span>2019</span>
+        </div>
+        
+        <h1 class="mb-0">holly</h1>
+
         <p class="mb-0">A blog of a mom and for moms</p>
       </section>
     </header>
@@ -152,7 +157,7 @@
         </section>
 
       <!-- blog section -->
-      <section class="blog">
+      <section class="cards">
         <div class="container">
           <div class="row justify-content-center">
             
@@ -197,7 +202,7 @@
                   <h4>[Web Development Student]</h4>
                   
                   <p>
-                  I'm Holly. I come from Hong Kong and I am a mom with a kid. Currently I am studying Web Development in <abbr title="Digital Career Institute">DCI</abbr>. <br> <br> Here is my blog where I shared my experience on cooking, with kids, etc.
+                  I'm Holly. I come from <a href="https://www.discoverhongkong.com/eng/index.html" target="_blank" alt="Hong Kong">Hong Kong</a> and I am a mom with a kid. Currently I am studying Web Development in <abbr title="Digital Career Institute">DCI</abbr>. <br> <br> Here is my blog where I shared my experience on cooking, with kids, etc.
                   </p>
                   
                 </div>
@@ -266,29 +271,40 @@
               </div>
 
 
-
-
-
           </div>
         </div>
       </section>
 
-      <section >
-        <div class="container text-center">
-          <a href="#backtotop"><p>&#9650;</p></a>
+      <!-- back to top at the bottom -->
+      <section class="backtotop position-sticky" >
+        <div>
+          <a href="#backtotop">
+            <p>&#9650;</p>
+          </a>
         </div>
       </section>
 
-      
+    
+
+      <!-- footer -->
 
       <footer>
-        <div class="container">
-          <div>
-            
-            <h3>I.T.B.</h3>
-            <p>A blog of a mom and for moms</p>
-          </di>
+
+        <div>
+          <span>ESTD</span><img src="./images/logo_holly.png" alt="Logo">
+          <span>2019</span>
         </div>
+        
+        <h1 class="mb-0">holly</h1>
+
+        <p class="mb-0">A blog of a mom and for moms</p>
+          
+        <hr>
+
+        <div class="copyright">
+          <p>&copy; 2019 - 2021 All right reserved.</p>
+        </div>
+        
       </footer>
     </main>
 

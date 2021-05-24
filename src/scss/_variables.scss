@@ -21,27 +21,18 @@ $header-h: 300px;
 $header-bg: #fff0f2;
 $header-pad: 10px 0;
 
-$h1-font-size: 8rem;
-$h1-font-color: #020202;
-$h1-font-family: "Nanum Myeongjo", serif;
-$h1-font-uppercase: uppercase;
+$h1-w: 360px;
+$h1-size: 8rem;
+$h1-color: #020202;
+$h1-family: "Nanum Myeongjo", serif;
+$h1-uppercase: uppercase;
+$h1-letter-space: 2rem;
+$h1-align: center;
 
 $header-p-font-size: 1.5rem;
 $header-p-letter-space: 0.3rem;
 
-// logo
 
-$logo-outer-w: 55px;
-$logo-outer-h: 55px;
-$logo-outer-margin: 10px 0;
-
-$logo-w: 45px;
-$logo-h: 45px;
-$logo-font-size: 2rem;
-$logo-br: 50%;
-$logo-bg: #fff0f2;
-$logo-color: #686868;
-$logo-border: 2px solid #686868;
 
 // sub-menu----------------------------
 $sub-menu-bg: #fcfcfc;
@@ -53,41 +44,53 @@ $sub-menu-hover-color: red;
 
 $dropdown-box-shadow:red;
 
-// blog --------------------------------
+// cards --------------------------------
 
-$blog-margin: 10px 0;
+$cards-margin: 10px 0;
 
-$blog-h2-font-size: 2.5rem;
-$blog-h2-margin: 15px 0;
-$blog-h2-color: #b89c00;
-$blog-h2-weight: 500;
-$blog-h2-line-h: 30px;
-$blog-h2-font-family: 'Newsreader', serif;
+$card-h2-font-size: 2.5rem;
+$card-h2-margin: 15px 0;
+$card-h2-color: #b89c00;
+$card-h2-weight: 500;
+$card-h2-line-h: 30px;
+$card-h2-font-family: 'Newsreader', serif;
 
-$blog-card-m: 0px 0 0px 0;
+$card-m: 0 0 30px 0;
+$card-id-h:15px;
 
-$blog-id-h:50px;
+$card-p-font-size: 1.6rem;
+$card-p-align: left;
+$card-p-pad: 0 5px;
+$card-p-color: #646464;
+$card-p-line-h: 30px;
 
+$card-a-style: none;
+$card-a-skip-ink: none;
+$card-a-color: #b89c00;
+$card-a-ul-style: underline;
+$card-a-ul-po: under;
+$card-a-ul-thick: 4px;
 
-$blog-p-font-size: 1.6rem;
-$blog-p-align: left;
-$blog-p-pad: 0 5px;
-$blog-p-color: #646464;
-$blog-p-line-h: 30px;
+$card-img-w: 100%;
+$card-img-blur: 0.9;
+$card-img-blur-hover: 0%;
+$card-img-scale: 1.025;
+$card-img-origin: 1;
+$card-img-transition: all 0.5s ease-in-out;
 
-$blog-a-style: none;
-$blog-a-skip-ink: none;
-$blog-a-color: #b89c00;
-$blog-a-ul-style: underline;
-$blog-a-ul-po: under;
-$blog-a-ul-thick: 4px;
+$card-btn-transition: all 0.25s ease-in-out;
+$card-btn-bg:#ffffff;
+$card-btn-color: #383838;
+$card-btn-border: 1px solid #b89c00;
+$card-btn-radius: 0;
+$card-btn-w: 100px;
+$card-btn-h: 25px;
+$card-btn-m: 5px;
+$card-btn-font-size: 1.3rem;
 
-$blog-img-w: 100%;
-$blog-img-blur: 0.9;
-$blog-img-blur-hover: 0%;
-$blog-img-scale: 1.025;
-$blog-img-origin: 1;
-$blog-img-transition: all 0.5s ease-in-out;
+$card-btn-hover-bg: #b89c00;
+$card-btn-hover-color: #ffffff;
+
 
 // Right side section ----------------
 
@@ -106,6 +109,11 @@ $rs-p-font-size: 1.4rem;
 $rs-p-abbr-color:#ff0000;
 $rs-p-abbr-thickness: 1.5px;
 
+$rs-a-color: black;
+$rs-a-dec: none;
+$rs-a-hover: underline double  #ffa600;
+$rs-a-ul-po: under;
+$rs-a-skip-ink:auto;
 
 
 $h4-font-size:1.5rem;
@@ -135,10 +143,12 @@ $sub-email-font-size: 1.4rem;
 
 $email-ps: 4px;
 
-$sub-btn-w: 60%;
+$sub-btn-w: 45%;
+$sub-btn-bg: #c2a500;
+$sub-btn-c:#ffffff;
 $sub-btn-border-radius: 5px;
-$sub-btn-hover-color: #ffffff;
-$sub-btn-hover-bg: #c2a500;
+$sub-btn-hover-color: #000000;
+$sub-btn-hover-bg: #cfcfcf;
 $sub-btn-transition: all 0.5s ease-in-out;
 
 // Popular posts
@@ -148,19 +158,38 @@ $pp-ul-thick: 2px;
 $pp-ul-po: under;
 $pp-skip-ink:none;
 
-// Back to top ------------------
-$backtotop-p-font-size: 4rem;
-$backtotop-p-pad: 40px 0;
+// Back to top (btt) ------------------
+$btt-bg: #c8e7e1ee;
+$btt-pad: 6px 0;
+$btt-w-h: 30px;
+$btt-border: 2px solid #c2a500;
+$btt-border-radius: 50%;
+$btt-center: center;
+
+$btt-p-size-lh: 1.6rem;
+$btt-p-color: #c2a500;
+$btt-p-bold: 700;
+$btt-p-align: baseline;
 
 
 
 // footer ------------------------
-$footer-mt: 50px;
-$footer-bg:#000000;
-$footer-pad:50px 0px;
+$footer-h:300px;
+$footer-bg: #000000;
+$footer-color: #a8a8a8;
 
 
-$footer-h3-font-family:"Nanum Myeongjo", serif;
-$footer-h3-font-size: 8rem;
+$h1-w: 350px;
+$h1-size: 8rem;
+$h1-family: "Nanum Myeongjo", serif;
+$h1-uppercase: uppercase;
+$h1-letter-space: 2rem;
+$h1-align: center;
+
 $footer-p-font-size: 1.5rem;
 $footer-p-letter-space: 0.3rem;
+
+$footer-hr-border: none;
+$footer-hr-h: 3px !important;
+$footer-hr-w: 100%;
+$footer-hr-mb: 0;

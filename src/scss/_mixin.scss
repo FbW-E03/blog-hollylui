@@ -23,6 +23,16 @@
 }
 
 // header ------------------------
+@mixin h1 ($align, $w, $size, $color, $family, $text-transform, $letter-space){
+  text-align: $align;
+  width: $w;
+  font-size: $size;
+  color: $color;
+  font-family: $family;
+  text-transform: $text-transform;
+  letter-spacing: $letter-space;
+}
+
 @mixin header-center {
   display: flex;
   flex-direction: column;
@@ -38,8 +48,8 @@
   font-size: $sub-menu-font-size;
 }
 
-
-// image ---------------------
+// Cards ------------------------
+// image 
 @mixin image($w, $blur, $scale, $transition) {
   width: $w;
   filter: grayscale($blur);
@@ -68,11 +78,34 @@
 
 }
 
-@mixin submit{
-  border: $sub-email-border;
-  height: $sub-email-h;
-  margin: $sub-email-m;
-  font-size: $sub-email-font-size;
-  width: $sub-btn-w;
-  border-radius: $sub-btn-border-radius;
+@mixin button ($bg, $btn-color, $border, $border-radius, $w, $h, $m, $font-size){
+  background: $bg;
+  color:$btn-color;
+  border: $border;
+  border-radius: $border-radius;
+  width: $w;
+  height: $h;
+  margin: $m;
+  font-size: $font-size;
+  
+}
+
+// back to top ---------------------
+@mixin btt-div($display, $m, $w, $h, $border, $border-radius, $justify, $align){
+  display: $display;
+  margin: $m;
+  width: $w;
+  height: $h;
+  border: $border;
+  border-radius: $border-radius;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin btt-p ($font-size, $line-height, $color, $font-weight, $align){
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $font-weight;
+  align-items: $align;
 }

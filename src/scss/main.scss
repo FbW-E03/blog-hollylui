@@ -69,33 +69,19 @@ header {
     @include header-center;
   }
 
-  .logo-outline {
-    width: $logo-outer-w;
-    height: $logo-outer-h;
-    margin: $logo-outer-margin;
+  img{
+    width: 70px;
+    padding: 0 10px;
   }
 
-  .logo {
-    width: $logo-w;
-    height: $logo-h;
-    font-size: $logo-font-size;
-    color: $logo-color;
+  span{
+    font-size: 1.5rem;
   }
 
-  .logo,
-  .logo-outline {
-    border-radius: $logo-br;
-    border: $logo-border;
-    background-color: $logo-bg;
-    @include flex-center;
-  }
+    h1 {
+      @include h1 ($h1-align, $h1-w, $h1-size, $h1-color, $h1-family, $h1-uppercase, $h1-letter-space);
+    }
 
-  h1 {
-    font-size: $h1-font-size;
-    color: $h1-font-color;
-    font-family: $h1-font-family;
-    text-transform: $h1-font-uppercase;
-  }
 
   p {
     font-size: $header-p-font-size;
@@ -127,78 +113,81 @@ header {
   }
 
 
-
 // cards
-
-.grid-container {
-  display: grid;
-  grid-template-areas: "left left right";
-  background-color: #2196f3;
-  padding: 10px;
-}
-// blogs
-
-.blog {
-  margin: $blog-margin;
+.cards{
+  
+  margin: $cards-margin;
 
   div[class="col-8"]{
     .id-top-height{
-      height:$blog-id-h;
+      height:$card-id-h;
     };
 
 
 
     div{
-      margin: $blog-card-m;
+      margin: $card-m;
+      position: relative;
 
       a {
-      text-decoration: $blog-a-style;
-      color: $blog-a-color;
+      text-decoration: $card-a-style;
+
 
         &:hover {
           @include a-link(
-            $blog-a-ul-thick $blog-a-ul-style, 
-            $blog-a-ul-po, 
-            $blog-a-skip-ink);
+            $card-a-ul-thick $card-a-ul-style, 
+            $card-a-ul-po, 
+            $card-a-skip-ink);
         }
       } 
 
       img {
         @include image(
-          $blog-img-w,
-          $blog-img-blur,
-          $blog-img-origin,
-          $blog-img-transition
+          $card-img-w,
+          $card-img-blur,
+          $card-img-origin,
+          $card-img-transition
         );
+
         object-fit: cover;
 
           &:hover {
-            filter: grayscale($blog-img-blur-hover);
-            transition: $blog-img-transition;
+            filter: grayscale($card-img-blur-hover);
+            transition: $card-img-transition;
 
           }
       }
 
 
       h2 {
-        font-size: $blog-h2-font-size;
-        margin: $blog-h2-margin;
-        font-family: $blog-h2-font-family;
-        font-weight: $blog-h2-weight;
-        line-height: $blog-h2-line-h;
-        color: $blog-h2-color;
+        font-size: $card-h2-font-size;
+        margin: $card-h2-margin;
+        font-family: $card-h2-font-family;
+        font-weight: $card-h2-weight;
+        line-height: $card-h2-line-h;
+        color: $card-h2-color;
       }
 
 
       p {
-        font-size: $blog-p-font-size;
-        text-align: $blog-p-align;
-        color: $blog-p-color;
-        // letter-spacing: -.5px;
-        // line-height: 20px;
-        // transform: scaleY(1.25)
+        font-size: $card-p-font-size;
+        text-align: $card-p-align;
+        color: $card-p-color;
+
       }
 
+      button{
+        position: absolute;
+        right: 10px;
+        @include button ($card-btn-bg, $card-btn-color, $card-btn-border, $card-btn-radius, $card-btn-w, $card-btn-h, $card-btn-m, $card-btn-font-size);
+        transition: $card-btn-transition;
+
+        &:hover{
+          background-color: $card-btn-hover-bg;
+          color: $card-btn-hover-color;
+          transition: $card-btn-transition;
+        }
+      }
     }
   }
 
@@ -206,7 +195,7 @@ header {
  }
 
 
-// Ride side (rs) section ----------------------
+// Right side (rs) section ----------------------
 
 .latest_posts,
 .social,
@@ -243,6 +232,21 @@ header {
   p { 
     font-size: $rs-p-font-size;
     text-align: $rs-p-align;
+
+    a{
+      text-decoration: $rs-a-dec;
+      &:link,
+      &:active,
+      &:visited{
+        color: $rs-a-color;
+        font-weight: 700;
+      }
+
+
+      &:hover{
+        @include a-link($rs-a-hover, $rs-a-ul-po, $rs-a-skip-ink);
+      }
+    }
     
   }
 
@@ -278,7 +282,7 @@ header {
     }
 
     input[type="submit"]{
-      @include submit;
+      @include button ($sub-btn-bg, $sub-btn-c,$sub-email-border, $sub-btn-border-radius, $sub-btn-w, $sub-email-h, $sub-email-m, $sub-email-font-size);
       transition: $sub-btn-transition;
 
       &:hover{
@@ -344,37 +348,71 @@ header {
 
 // Back to top --------------------------
 
-a{
- 
-  p{
-    font-size: $backtotop-p-font-size;
-    padding:$backtotop-p-pad ;
+.backtotop{
+  background-color: $btt-bg;
+  padding: $btt-pad;
+  bottom: 0;
+  div{
+    @include btt-div(flex, 0 auto, $btt-w-h, $btt-w-h, $btt-border, $btt-border-radius, $btt-center, $btt-center);
+        
+    p{
+      @include btt-p ($btt-p-size-lh, $btt-p-size-lh,$btt-p-color, $btt-p-bold, $btt-p-align );
+
+    }
   }
 }
+
+
 
 
 // footer -------------------------------
 
-footer{
+footer {
+  @include header-center;
+  height: $footer-h;
+  background-color: $footer-bg;
+  color:$footer-color;
+  position: relative;
+  bottom: 0;
 
-  background:$footer-bg;
-  
-.container{
-  background:$footer-bg;}
-  text-align: center;
 
-  div{
-    padding: $footer-pad;
-    h3{
-    color: white;
-    font-family: $footer-h3-font-family;
-    font-size: $footer-h3-font-size;
+  img{
+    width: 70px;
+    padding: 0 10px;
   }
 
- p{
+  span{
+    font-size: 1.5rem;
+
+  }
+
+    h1 {
+      @include h1 ($h1-align, $h1-w, $h1-size, $footer-color, $h1-family, $h1-uppercase, $h1-letter-space);
+    }
+
+
+  p {
+    
     font-size: $footer-p-font-size;
-    color: white;
     letter-spacing: $footer-p-letter-space;
+    
+    
   }
+
+    hr{
+      @include hr-style($footer-hr-border, $footer-color, $footer-hr-h, $footer-hr-w, $footer-hr-mb);
+      margin-top: 30px;
+    }
   }
+  
+  .copyright{
+    width: 100%;
+    
+
+    p{
+    margin: 0;
+    text-align: center;
+    line-height: 60px;
+    }
 }
+
