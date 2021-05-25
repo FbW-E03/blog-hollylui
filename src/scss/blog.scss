@@ -1,0 +1,48 @@
+// This is where you can import other stylesheets or write your scss code
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./mixin";
+@import "./variables";
+
+// Blog iframe-----------------------
+
+// .container{
+//    div:nth-child(4n + 3){
+//     display: none;
+//   }
+
+// }
+
+
+.blog-container {
+  background-color: rgb(226, 226, 226);
+  position: relative;
+  width: 60% !important;
+  overflow: visible;
+  margin: auto;
+  padding: 10px;
+
+  
+  
+  span{
+
+    width: 100% !important;
+    img{
+      width: 100% !important;
+      object-fit: cover !important;
+    }
+  }
+  
+
+  table{
+    margin: 0 auto !important;
+  }
+ 
+
+  .responsive-if {
+    width: 100%;
+    height: fit-content !important;
+    border: none;
+
+  }
+  
+}
