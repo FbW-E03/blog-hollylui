@@ -1,68 +1,92 @@
-$body-bg: f1f1f1;
+$body-bg: #fff9f9;
+
+$body-family: "Karla", sans-serif;
+$h2-font-family: "Nanum Myeongjo", serif;
+$h3-font-family: 'Newsreader', serif;
+
+$abbr-color:#ff0000;
+$abbr-thick: 1.5px;
+
+$f-upper: uppercase;
+
+// font-size ------------------------
+$h1-font-size: 1rem;
+$h2-font-size: 8rem;
+$h3-main-font-size: 2.5rem;
+$h3-font-size: 5rem;
+$h4-font-size: 1.6rem;
+$p-font-size: 1.6rem;
+
+
+// font color ------------------------
+$body-color: #585858;
+$h2-color: #020202;
+$h3-color: #b89c00;
+$h4-color: #020202;
+$q-color:#313131;
 
 // navbar ----------------------------
 
-$nav-padding: 15px;
+$nav-a-font-size: 1.4rem;
+$nav-a-deco: none;
 
-$nav-font-uppercase: uppercase;
-$nav-font-size: 1.4rem;
-$nav-font-style: none;
-$nav-font-color: #585858;
-$nav-font-padding: 0 10px;
-$nav-font-weight: 500;
-$nav-font-hover: #ff0000;
-$nav-font-burger: 1.6rem;
+$nav-a-font-pad: 0 10px;
+$nav-a-font-bold: 500;
+$nav-a-hover: #ff0000;
 
-$nav-img-width: 17px;
+$nav-burger-font-size: 1.6rem;
+
+$nav-img-w: 17px;
 
 
-// header ------------------------------
-$header-h: 300px;
+// header - footer ------------------------
+
 $header-bg: #fff0f2;
 $header-pad: 10px 0;
 
-$h1-w: 360px;
-$h1-size: 8rem;
-$h1-color: #020202;
-$h1-family: "Nanum Myeongjo", serif;
-$h1-uppercase: uppercase;
-$h1-letter-space: 2rem;
-$h1-align: center;
+$footer-bg: #000000;
+$footer-color: #a8a8a8;
 
-$header-p-font-size: 1.5rem;
-$header-p-letter-space: 0.3rem;
+$h2-w: 360px;
+$h2-color: #020202;
+$h2-letter-space: 2rem;
+$h2-align: center;
+$h2-uppercase: uppercase;
+
+$header-footer-h:300px;
+$header-footer-p-font-size: 1.5rem;
+$header-footer-p-letter-space: 0.3rem;
+
+$footer-hr-border: none;
+$footer-hr-h: 3px !important;
+$footer-hr-w: 100%;
+$footer-hr-mb: 0;
 
 
 
-// sub-menu----------------------------
-$sub-menu-bg: #fcfcfc;
-$sub-menu-font-family: "Karla", sans-serif;
+// sub-menu ----------------------------
+$sub-menu-bg: #C8E7E1;
+$sub-menu-h: 40px;
+$sub-menu-font-family: $body-family;
 $sub-menu-font-size: 1.5rem;
 $sub-menu-pad: 8px 15px;
-$sub-menu-color: #4b4b4b;
+$sub-menu-color: $body-color;
 $sub-menu-hover-color: red;
 
 $dropdown-box-shadow:red;
 
 // cards --------------------------------
 
-$cards-margin: 10px 0;
+$card-top-pad:15px;
 
-$card-h2-font-size: 2.5rem;
-$card-h2-margin: 15px 0;
-$card-h2-color: #b89c00;
-$card-h2-weight: 500;
-$card-h2-line-h: 30px;
-$card-h2-font-family: 'Newsreader', serif;
+$cards-m: 10px 0;
 
-$card-m: 0 0 30px 0;
-$card-id-h:15px;
 
-$card-p-font-size: 1.6rem;
-$card-p-align: left;
-$card-p-pad: 0 5px;
-$card-p-color: #646464;
-$card-p-line-h: 30px;
+$card-h3-margin: 15px 0;
+$card-h3-color: #b89c00;
+$card-h3-weight: 500;
+$card-h3-line-h: 30px;
+$card-h3-font-family: 'Newsreader', serif;
 
 $card-a-style: none;
 $card-a-skip-ink: none;
@@ -70,6 +94,17 @@ $card-a-color: #b89c00;
 $card-a-ul-style: underline;
 $card-a-ul-po: under;
 $card-a-ul-thick: 4px;
+
+$card-m: 0 0 30px 0;
+
+
+$card-p-font-size: 1.6rem;
+$card-p-align: left;
+$card-p-pad: 0 5px;
+$card-p-color: #646464;
+$card-p-line-h: 30px;
+
+
 
 $card-img-w: 100%;
 $card-img-blur: 0.9;
@@ -98,16 +133,15 @@ $rs-m: 10px;
 $rs-border: 1px solid #e2e2e2;
 
 
-$h3-align: center;
-$h3-font-size: 1.6rem;
-$h3-color: #686868;
-$h3-transform: uppercase;
-$h3-pt:15px;
+$h4-align: center;
+
+$h4-color: #686868;
+$h4-transform: uppercase;
+$h4-pt:15px;
 
 $rs-p-align: center;
 $rs-p-font-size: 1.4rem;
-$rs-p-abbr-color:#ff0000;
-$rs-p-abbr-thickness: 1.5px;
+
 
 $rs-a-color: black;
 $rs-a-dec: none;
@@ -116,13 +150,13 @@ $rs-a-ul-po: under;
 $rs-a-skip-ink:auto;
 
 
-$h4-font-size:1.5rem;
-$h4-transform: capitalize;
-$h4-font-family: 'Nanum Myeongjo', serif;
-$h4-pad: 15px 0;
-$h4-color: #c2a500;
-$h4-align: center;
-$h4-weight:700;
+$h5-font-size:1.5rem;
+$h5-transform: capitalize;
+$h5-font-family: 'Nanum Myeongjo', serif;
+$h5-pad: 15px 0;
+$h5-color: #c2a500;
+$h5-align: center;
+$h5-weight:700;
 
 $hr-border: none;
 $hr-color: red;
@@ -161,35 +195,17 @@ $pp-skip-ink:none;
 // Back to top (btt) ------------------
 $btt-bg: #c8e7e1ee;
 $btt-pad: 6px 0;
-$btt-w-h: 30px;
+$btt-w-h: 25px;
 $btt-border: 2px solid #c2a500;
 $btt-border-radius: 50%;
 $btt-center: center;
 
-$btt-p-size-lh: 1.6rem;
+$btt-p-size-lh: 1.5rem;
 $btt-p-color: #c2a500;
-$btt-p-bold: 700;
-$btt-p-align: baseline;
+$btt-p-bold: 300;
+$btt-p-align: center;
 
 
 
-// footer ------------------------
-$footer-h:300px;
-$footer-bg: #000000;
-$footer-color: #a8a8a8;
 
 
-$h1-w: 350px;
-$h1-size: 8rem;
-$h1-family: "Nanum Myeongjo", serif;
-$h1-uppercase: uppercase;
-$h1-letter-space: 2rem;
-$h1-align: center;
-
-$footer-p-font-size: 1.5rem;
-$footer-p-letter-space: 0.3rem;
-
-$footer-hr-border: none;
-$footer-hr-h: 3px !important;
-$footer-hr-w: 100%;
-$footer-hr-mb: 0;

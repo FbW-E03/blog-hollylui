@@ -1,3 +1,29 @@
+// $w - width
+// $h - height
+// $color - text color
+// $t-family - text family
+// $t-deco - text decoration (e.g. underline, overline)
+// $font-size - font size
+// $font-weight - font weight
+// $t-ul-po - text underline position
+// $t-skip-ink - text decoration skip ink
+// $t-align - text align
+// $t-transform - text transform
+// $letter-space - letter spacing
+// $blur - filter grayscale 
+// $scale - transform scale
+// $transition - transition
+
+
+
+@mixin image-animation ($w, $blur, $scale, $transition) {
+  width: $w;
+  filter: grayscale($blur);
+  transform: scale($scale);
+  transition: $transition;
+}
+
+
 @mixin flex-center {
   display: flex;
   flex-wrap: nowrap;
@@ -6,56 +32,57 @@
 }
 
 @mixin a-link($text-dec, $text-ul-po, $text-skip-ink){
+
   text-decoration: $text-dec;
   text-underline-position: $text-ul-po;
   text-decoration-skip-ink: $text-skip-ink;
 }
 
 
-
-// navbar------------------------
-
-@mixin nav-position {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
+@mixin anchor ($color, $font-size, $pad, $t-deco, $t-ul-po, $t-skip-ink){
+  color: $color;
+  font-size: $font-size;
+  padding: $pad;
+  text-decoration:$t-deco;
+  text-underline-position: $t-ul-po;
+  text-decoration-skip-ink: $t-skip-ink;
 }
+
+
+
+
 
 // header ------------------------
-@mixin h1 ($align, $w, $size, $color, $family, $text-transform, $letter-space){
-  text-align: $align;
-  width: $w;
-  font-size: $size;
-  color: $color;
-  font-family: $family;
-  text-transform: $text-transform;
-  letter-spacing: $letter-space;
+@mixin h2 {
+  width: $h2-w;
+  color: $h2-color;
+  font-family: $h2-font-family;
+  text-align: $h2-align;
+  font-size: $h2-font-size;
+  text-transform: $f-upper;
+  letter-spacing: $h2-letter-space;
 }
 
-@mixin header-center {
+@mixin h3{
+  font-size: $h3-font-size;
+  color: $h3-color;
+  font-family: $h3-font-family;
+  padding: 40px 0 10px 0;
+  letter-spacing: 10px;
+}
+
+@mixin header-footer-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px dotted 414141;
 }
 
-// sub-menu----------------------
-@mixin sub-menu {
-  padding: $sub-menu-pad;
-  color: $sub-menu-color;
-  font-size: $sub-menu-font-size;
-}
+
 
 // Cards ------------------------
 // image 
-@mixin image($w, $blur, $scale, $transition) {
-  width: $w;
-  filter: grayscale($blur);
-  transform: scale($scale);
-  transition: $transition;
-}
+
 
 
 // about me ------------------

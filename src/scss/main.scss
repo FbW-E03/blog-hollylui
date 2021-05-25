@@ -19,54 +19,61 @@
 }
 
 body {
-  font-family: "Karla", sans-serif;
+  font-family: $body-family;
   background-color: $body-bg;
+  color: $body-color;
+}
+
+
+abbr{
+  text-decoration-color: $abbr-color !important;
+  text-decoration-thickness: $abbr-thick !important;
+  cursor: pointer !important;
 }
 
 // navbar --------------------------------
 
 nav {
-  @include nav-position;
-  padding: $nav-padding;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 15px;
 
-  a {
-    text-decoration: $nav-font-style;
-    text-transform: $nav-font-uppercase;
-    font-size: $nav-font-size;
-    color: $nav-font-color;
-    padding: $nav-font-padding;
-    font-weight: $nav-font-weight;
+    a {
+      @include anchor ($body-color, $nav-a-font-size, $nav-a-font-pad, $nav-a-deco, none, none);
+      text-transform: $f-upper;
+      font-weight: $nav-a-font-bold;
 
-    &:hover {
-      color: $nav-font-hover;
-    }
+      &:hover {
+        color: $nav-a-hover;
+      }
     
-  }
+    }
 
-  img{
-    width: $nav-img-width;
-  }
+    img{
+      width: $nav-img-w;
+    }
   
 
-  .nav-link {
-    color: $nav-font-color;
-    font-size: $nav-font-burger;
-
-    &:hover {
-      color: $nav-font-hover;
+    .nav-link {
+      color: $body-color;
+      font-size: $body-color;
     }
-  }
 }
 
-// header ----------------------------
-header {
-  height: $header-h;
-  background-color: $header-bg;
-  padding: $header-pad;
+
+// header - footer -------------------------------
+
+header,
+footer {
+  height: $header-footer-h;
+  position: relative;
+  bottom: 0;
 
   &,
   section {
-    @include header-center;
+    @include header-footer-center;
   }
 
   img{
@@ -74,26 +81,52 @@ header {
     padding: 0 10px;
   }
 
-  span{
-    font-size: 1.5rem;
-  }
+  span{font-size: 1.5rem;}
 
-    h1 {
-      @include h1 ($h1-align, $h1-w, $h1-size, $h1-color, $h1-family, $h1-uppercase, $h1-letter-space);
-    }
-
+  h2{@include h2;}
 
   p {
-    font-size: $header-p-font-size;
-    letter-spacing: $header-p-letter-space;
+    font-size: $header-footer-p-font-size;
+    letter-spacing: $header-footer-p-letter-space;  
+  }
+
+  
+}
+  
+
+
+header {
+  background-color: $header-bg;
+  padding: $header-pad;
+
+}
+
+footer{
+  background-color: $footer-bg;
+  h2{color: #a8a8a8;}
+
+  hr{
+    @include hr-style($footer-hr-border, $footer-color, $footer-hr-h, $footer-hr-w, $footer-hr-mb);
+    margin-top: 30px;
+    }
+
+  .copyright{
+    width: 100%;
+    
+    p{
+      margin: 0;
+      text-align: center;
+      line-height: 60px;
+    }
   }
 }
 
-// main ----------------------------------
 
-// sub-menu
-.sticky-top{
-  background-color: #C8E7E1;
+// sub-menu ------------------------------------
+
+section[class^="submenu"]{
+  background-color: $sub-menu-bg;
+  height: $sub-menu-h;
 
     div[class="container"] {
 
@@ -102,8 +135,9 @@ header {
       div[class^="dropdown"] {
 
         a {
-          @include sub-menu;
-
+          
+          @include anchor ( $sub-menu-color, $sub-menu-font-size, $sub-menu-pad, none,none, none);
+          
           &:hover{
           color: $sub-menu-hover-color;
           }
@@ -113,36 +147,40 @@ header {
   }
 
 
-// cards
+// cards ---------------------------------------
 .cards{
-  
-  margin: $cards-margin;
+  margin: $cards-m;
 
   div[class="col-8"]{
-    .id-top-height{
-      height:$card-id-h;
+    .top-padding{
+      height:$card-top-pad;
     };
-
-
 
     div{
       margin: $card-m;
       position: relative;
 
+      h3 {
+        font-size: $h3-main-font-size;
+        margin: $card-h3-margin;
+        font-family: $h3-font-family;
+        font-weight: $card-h3-weight;
+        line-height: $card-h3-line-h;
+        color: $card-h3-color;
+      }
+
       a {
-      text-decoration: $card-a-style;
+        @include anchor ($h3-color, $h3-font-size, 0, $card-a-style, none, none);
 
 
         &:hover {
-          @include a-link(
-            $card-a-ul-thick $card-a-ul-style, 
-            $card-a-ul-po, 
-            $card-a-skip-ink);
+          @include anchor ($h3-color, $h3-font-size, 0, $card-a-ul-style, $card-a-ul-po, none);
+          text-decoration-thickness: $card-a-ul-thick;
         }
       } 
 
-      img {
-        @include image(
+      .card-img {
+        @include image-animation(
           $card-img-w,
           $card-img-blur,
           $card-img-origin,
@@ -159,14 +197,7 @@ header {
       }
 
 
-      h2 {
-        font-size: $card-h2-font-size;
-        margin: $card-h2-margin;
-        font-family: $card-h2-font-family;
-        font-weight: $card-h2-weight;
-        line-height: $card-h2-line-h;
-        color: $card-h2-color;
-      }
+      
 
 
       p {
@@ -194,6 +225,9 @@ header {
 
  }
 
+ .carousel-item{
+   transition: transform 5s ease !important;
+ }
 
 // Right side (rs) section ----------------------
 
@@ -206,26 +240,26 @@ header {
   border: $rs-border;
   flex-direction: column;
   
-  h3 {
-    text-align: $h3-align;
-    font-size: $h3-font-size;
-    text-transform: $h3-transform;
-    color: $h3-color;
-    padding-top: $h3-pt;
+  h4 {
+    text-align: $h4-align;
+    font-size: $h4-font-size;
+    text-transform: $h4-transform;
+    color: $h4-color;
+    padding-top: $h4-pt;
   }
 
   hr{
     @include hr-style($hr-border, $hr-color, $hr-h, $hr-w, $hr-mb);
   }
   
-  h4{
-    font-size: $h4-font-size;
-    font-family: $h4-font-family;
-    font-weight: $h4-weight;
-    text-transform: $h4-transform;
-    padding: $h4-pad;
-    color: $h4-color;
-    text-align: $h4-align;
+  h5{
+    font-size: $h5-font-size;
+    font-family: $h5-font-family;
+    font-weight: $h5-weight;
+    text-transform: $h5-transform;
+    padding: $h5-pad;
+    color: $h5-color;
+    text-align: $h5-align;
   }
 
 
@@ -250,10 +284,6 @@ header {
     
   }
 
-  abbr{
-    text-decoration-color: $rs-p-abbr-color;
-    text-decoration-thickness: $rs-p-abbr-thickness;
-  }
   
     
   .carousel-item{
@@ -355,64 +385,17 @@ header {
   div{
     @include btt-div(flex, 0 auto, $btt-w-h, $btt-w-h, $btt-border, $btt-border-radius, $btt-center, $btt-center);
         
-    p{
+    a {
+      p{
+        
+        margin: 0;
+        padding-bottom: 3px;
       @include btt-p ($btt-p-size-lh, $btt-p-size-lh,$btt-p-color, $btt-p-bold, $btt-p-align );
 
     }
+    }
   }
 }
 
 
-
-
-// footer -------------------------------
-
-footer {
-  @include header-center;
-  height: $footer-h;
-  background-color: $footer-bg;
-  color:$footer-color;
-  position: relative;
-  bottom: 0;
-
-
-  img{
-    width: 70px;
-    padding: 0 10px;
-  }
-
-  span{
-    font-size: 1.5rem;
-
-  }
-
-    h1 {
-      @include h1 ($h1-align, $h1-w, $h1-size, $footer-color, $h1-family, $h1-uppercase, $h1-letter-space);
-    }
-
-
-  p {
-    
-    font-size: $footer-p-font-size;
-    letter-spacing: $footer-p-letter-space;
-    
-    
-  }
-
-    hr{
-      @include hr-style($footer-hr-border, $footer-color, $footer-hr-h, $footer-hr-w, $footer-hr-mb);
-      margin-top: 30px;
-    }
-  }
-  
-  .copyright{
-    width: 100%;
-    
-
-    p{
-    margin: 0;
-    text-align: center;
-    line-height: 60px;
-    }
-}
 
