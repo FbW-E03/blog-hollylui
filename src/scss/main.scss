@@ -163,9 +163,20 @@ section[class^="submenu"] {
   }
 }
 
-// cards ---------------------------------------
-.cards {
+// content ---------------------------------------
+
+.content {
   margin: $cards-m;
+
+  .asterisk {
+    color: $asterisk-color;
+    font-size: $asterisk-font-size;
+  }
+
+  p {
+    font-size: $p-font-size;
+    text-align: $card-p-align;
+  }
 
   div[class="col-8"] {
     .top-padding {
@@ -216,25 +227,21 @@ section[class^="submenu"] {
         }
       }
 
-      p {
-        font-size: $p-font-size;
-        text-align: $card-p-align;
-      }
-
-      button {
+      p ~ button {
         position: absolute;
         right: 10px;
         @include button(
-          $card-btn-bg,
+          $btn-bg,
           $body-color,
           $card-btn-border,
-          $card-btn-radius,
-          $card-btn-w,
-          $card-btn-h,
-          $card-btn-m,
-          $p-font-size
+          $btn-radius,
+          $btn-w,
+          $btn-h,
+          $btn-m,
+          $btn-font-size
         );
-        transition: $card-btn-transition;
+        text-transform: uppercase;
+        transition: $btn-transition;
 
         &:hover {
           background-color: $card-btn-hover-bg;
@@ -273,7 +280,7 @@ section[class^="submenu"] {
   }
 
   hr {
-    @include hr-style(none, #ff0000, 2px, 20%, 15px, solid);
+    @include hr-style(none, #ff0000, 1px, 25%, 20px, solid);
   }
 
   p {
@@ -312,12 +319,19 @@ section[class^="submenu"] {
     text-align: center;
 
     input[type="email"] {
-      @include email;
-      color: $sub-email-color;
+      @include textarea(
+        $sub-email-color,
+        $sub-email-w,
+        $sub-email-border,
+        $sub-email-h,
+        $p-rs-font-size,
+        $sub-email-m,
+        $sub-email-ps
+      );
 
       &:focus {
         outline: none;
-        background-color: $sub-email-bg-hover;
+        border: 1px solid $sub-focus;
       }
     }
 
@@ -400,6 +414,10 @@ section[class^="submenu"] {
 
   div {
     @include btt-div;
+
+    a {
+      text-decoration: none;
+    }
 
     p {
       @include btt-p;

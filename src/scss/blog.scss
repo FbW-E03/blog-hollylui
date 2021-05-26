@@ -3,46 +3,71 @@
 @import "./mixin";
 @import "./variables";
 
-// Blog iframe-----------------------
-
-// .container{
-//    div:nth-child(4n + 3){
-//     display: none;
-//   }
-
-// }
-
-
-.blog-container {
-  background-color: rgb(226, 226, 226);
-  position: relative;
-  width: 60% !important;
-  overflow: visible;
-  margin: auto;
-  padding: 10px;
-
-  
-  
-  span{
-
-    width: 100% !important;
-    img{
-      width: 100% !important;
-      object-fit: cover !important;
-    }
+// iframe -----------------------
+.iframes {
+  iframe {
+    width: 681px;
+    height: 1300px;
   }
-  
+}
 
-  table{
-    margin: 0 auto !important;
+.blog-bg {
+  width: 80% !important;
+  padding: 10px 0;
+  border: 2px dotted #cfcfcf;
+  h3 {
+    @include header(
+      $h3-color,
+      $h3-font-family,
+      none,
+      $h3-font-size,
+      none,
+      10px,
+      5px 0 5px 0!important
+    );
+    margin: 0 !important;
   }
- 
 
-  .responsive-if {
-    width: 100%;
-    height: fit-content !important;
-    border: none;
-
+  p {
+    margin: 5px 0 !important;
   }
-  
+
+  h3 ~ p ~ img {
+    @include image(100%, 400px, 0, 0, 1, none, cover);
+  }
+
+  h4 {
+    @include header(
+      $h4-color,
+      $body-family,
+      $rs-align,
+      $h4-font-size,
+      $f-upper,
+      none,
+      $rs-pt 0 0 0
+    );
+    text-align: left;
+  }
+}
+
+.blog-title {
+  @include header(
+    $h3-assignment!important,
+    $h3-font-family,
+    none,
+    $h3-assignment-font-size,
+    $f-upper!important,
+    10px,
+    40px 0 10px 0
+  );
+  text-align: left;
+}
+
+blockquote {
+  width: 70%;
+  color: white !important;
+  background-color: #b89c00;
+  padding: 10px 20px !important;
+  text-align: justify;
+  margin: 20px auto !important;
 }

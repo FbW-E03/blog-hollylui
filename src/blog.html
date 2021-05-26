@@ -1,80 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head >
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- use google font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Newsreader:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
-   
-   <!-- style sheet -->
-   <link rel="stylesheet" href="./styles/blog.css">
-   <link rel="stylesheet" href="styles/main.css" />
-   
-   <!-- Script to link other html to current html -->
+    <link rel="icon" type="image/png" href="./images/logo_holly.png" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Newsreader:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="styles/blog.css" />
+    <link rel="stylesheet" href="styles/about-contact.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <title>HOLLY | Blog</title>
+
+    <!-- Script to link other html to index.html -->
     <script src="./scripts/link-html.js"></script>
-    
-    
-   <title>i.t.b. | Blog</title>
-  
- </head>
+  </head>
 
- <body>
-
-    <!-- nav -->
-    <!-- link to navbar.html -->
-    <div data-include="navbar.html"></div>
-
-
-    <!-- Blog content  -->
-
-    <div class="container"> 
-        <div class="blog-container">
-          <iframe class="responsive-if" src="https://docs.google.com/document/d/e/2PACX-1vRuuJ1tzjO66RLIfahP5nuc1aBTNaKd8abwcIBh0K5iscfm2HVnh1MILhxEcIg7R0addIH9BqzcDHVh/pub?embedded=true" scrolling="no"></iframe>   
-        </div>
-
-        <br>
-
-        <div class="blog-container">
-          <iframe class="responsive-if" src="" scrolling="no"></iframe>
-        </div>
-
-        <br>
-
-        <div class="blog-container">
-          <iframe class="responsive-if" src="https://docs.google.com/document/d/e/2PACX-1vTeEHJUUqi4bnVPhz-gH3najg8yY1uFXqvHPt2OO-_YCjsCgnSDciNbfTnWbqH1q4qZ9K3t20mIvm2P/pub?embedded=true" scrolling="no"></iframe>
-        </div>
-      
-        <br>
-
-        <div class="blog-container">
-          <iframe class="responsive-if" src="" scrolling="no"></iframe>
-        </div>
-       
+  <body id="backtotop">
+    <h1 class="visually-hidden">Holly | Blog</h1>
+    <!-- nav: link to navbar.html -->
+    <div class="sticky-top">
+      <div data-include="navbar.html"></div>
     </div>
 
+    <!-- header -->
+    <header>
+      <div data-include="header-footer.html"></div>
+    </header>
 
+    <!-- main -->
+    <main>
+      <!-- sub-menu -->
+      <section class="submenu"></section>
 
-    <!-- Blog content end -->
+      <!-- about section -->
+      <section class="content">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-8">
+              <h3>Blog:</h3>
 
-    <!-- script -->
-    <script src="scripts/blog.js"></script>
+              <div class="blog">
+                <div class="row text-center justify-content-center">
+                  <!-- blog 2 -->
+                  <div class="blog-bg">
+                    <h3 class="blog-title">Fried Cauliflower</h3>
+                    <p>Septemer 28, 2020</p>
+                    <img
+                      src="images/blog-image/fried-cauliflower-blog2-img.webp"
+                      alt="Fried cauliflower"
+                    />
+                    <p>
+                      Ok, I am not Slovak but my husband is. Living in Germany
+                      may not find Slovak food easily. Then, my husband taught
+                      (a.k.a forced) me to learn. Fried Cauliflower (Slovak
+                      name: Vyprážaný Karfiol) is one of popular dish in
+                      Slovakia if you eat outside. Below is my version.
+                    </p>
+                    <h4>Ingredient</h4>
+                    <p>#cauliflower #salt #eggwash #oil #flour #breadcrumbs</p>
+                    <h4>Messy Start</h4>
+                    <p>
+                      I have some leftover during the lunch time. So, I only
+                      used half cauliflower.First of all, I boiled the
+                      cauliflower in the salty water until it is soft. There are
+                      some inside leaves from cauliflower. It also tastes good
+                      by boiling it or stir frying it. The outside one is the
+                      harder one. I keep them for guinea pigs. After boiling the
+                      cauliflower, let it cool down and then you can start to
+                      make the coating. Dip the cauliflower into flour, then egg
+                      wash and then breadcrumb. After it, put it into the hot
+                      oil and deep fry until crispy. Nothing fancy but tasty.
+                    </p>
+                    <blockquote>
+                      Except fried cauliflower, there were some leftover such as
+                      pan fried potatoes and chicken breast burger from the
+                      lunch. I gave two pieces fried cauliflowes to my kid. She
+                      said it is chicken (FYI: she loves chicken)… but after two
+                      pieces, she only ate potatoes… So, I tried but it is
+                      difficult to make kid like vegetables….
+                    </blockquote>
+                  </div>
+                  <!-- blog end -->
+
+                  <!-- blog 1 -->
+                  <div class="blog-bg">
+                    <h3 class="blog-title">Chenpi</h3>
+                    <p>October 1, 2020</p>
+                    <img
+                      src="images/blog-image/blog-image-1.jpg"
+                      alt="Chenpi"
+                    />
+                    <p>
+                      Chenpi is a sun-dried tangerine peel. In Hong Kong, it
+                      uses on different dishes such as red bean soup, congee,
+                      steam fish, fish ball or just put into a hot water like
+                      tea. Surely you can find it in the Asian store. But you
+                      have no idea what chemical stuff it added on the peel… and
+                      the good quality and few-year-sun-tried chenpi is very
+                      expensive. So I decided to prepare my own chenpi.
+                    </p>
+                    <h4>Ingredient</h4>
+                    <p>Tangerines</p>
+                    <h4>Messy Start</h4>
+                    <p>
+                      Actually it is not so messy. Just peel off the skin of
+                      tangerine and remove stem and the white “meat” (albedo) as
+                      much as possible by a knife. Then dry under the sun for 3
+                      days. After it, you can store it into tight seal glass and
+                      keep it in cool area. Every year, you just need to put
+                      under the sun for a while and then you can keep very long
+                      time…
+                    </p>
+                    <blockquote>
+                      According to some websites, if the sun-dried tangerine
+                      peel is called chenpi, it needs to dry minimum 3 years. If
+                      not, it only can be called sun-dried peel… so, I tried but
+                      it still has 154 weeks to go….
+                    </blockquote>
+                  </div>
+                  <!-- blog end -->
+
+                  <div class="iframes">
+                    <iframe
+                      class="col-12"
+                      src="https://docs.google.com/document/d/e/2PACX-1vRuuJ1tzjO66RLIfahP5nuc1aBTNaKd8abwcIBh0K5iscfm2HVnh1MILhxEcIg7R0addIH9BqzcDHVh/pub?embedded=true"
+                    ></iframe>
+                  </div>
+
+                  <div class="iframes">
+                    <iframe
+                      class="col-12"
+                      src="https://docs.google.com/document/d/e/2PACX-1vTeEHJUUqi4bnVPhz-gH3najg8yY1uFXqvHPt2OO-_YCjsCgnSDciNbfTnWbqH1q4qZ9K3t20mIvm2P/pub?embedded=true"
+                    ></iframe>
+                  </div>
+
+                  <div class="iframes">
+                    <iframe
+                      class="col-12"
+                      src="https://docs.google.com/document/d/e/2PACX-1vTCtE3ul5zH2OF_fUxSJvn1GjfkAf_YH59_uXiZTudlHZfJVusD0GRd67B70B-pebVNmv3ktZ6tw9G7/pub?embedded=true"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Side section -->
+            <div data-include="rightside.html"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- back to top at the bottom -->
+      <section class="backtotop position-sticky">
+        <div>
+          <a href="#backtotop">
+            <p>&#9650;</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- footer -->
+
+      <footer>
+        <div data-include="header-footer.html"></div>
+
+        <hr />
+
+        <div class="copyright">
+          <p>&copy; 2019 - 2021 All right reserved.</p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- script section -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous">
-    </script>
-
+      crossorigin="anonymous"
+    ></script>
     <script src="scripts/index.js"></script>
-
-
-
-
- </body>
- </html>
- 
- 
-
-
+  </body>
+</html>

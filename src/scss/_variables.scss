@@ -1,13 +1,14 @@
 $body-bg: #fff9f9;
 
+$abbr-color: #ff00ff;
+$abbr-thick: 2px;
+
+$f-upper: uppercase;
+
+// font family ---------------------
 $body-family: "Karla", sans-serif;
 $h2-font-family: "Nanum Myeongjo", serif;
 $h3-font-family: "Newsreader", serif;
-
-$abbr-color: #ff0000;
-$abbr-thick: 1.5px;
-
-$f-upper: uppercase;
 
 // font-size ------------------------
 $h1-font-size: 1rem;
@@ -28,7 +29,6 @@ $h4-color: #020202;
 $q-color: #313131;
 
 // navbar ----------------------------
-
 $nav-a-font-size: 1.4rem;
 $nav-a-deco: none;
 
@@ -69,8 +69,9 @@ $sub-menu-hover-color: red;
 
 $dropdown-box-shadow: red;
 
-// cards --------------------------------
+// content --------------------------------
 
+// cards
 $card-top-pad: 15px;
 $card-color: #b89c00;
 $cards-m: 10px 0;
@@ -94,16 +95,37 @@ $card-p-pad: 0 5px;
 $card-p-color: #646464;
 $card-p-line-h: 30px;
 
-$card-btn-transition: 0.25s ease-in-out;
-$card-btn-bg: #ffffff;
 $card-btn-color: #383838;
 $card-btn-border: 1px solid $card-color;
-$card-btn-radius: 0;
-$card-btn-w: 100px;
-$card-btn-h: 25px;
-$card-btn-m: 5px;
 $card-btn-hover-bg: $card-color;
 $card-btn-hover-color: #ffffff;
+
+// button
+$btn-bg: #ffffff;
+$btn-radius: 0;
+$btn-w: 100px;
+$btn-h: 25px;
+$btn-m: 5px;
+$btn-border: #cfcfcf;
+$btn-transition: 0.25s ease-in-out;
+$btn-font-size: 1.2rem;
+
+// form
+$form-btn-hover-bg: rgb(43, 43, 43);
+$form-btn-hover-color: white;
+$form-btn-h: 30px;
+
+$form-input-color: #000000;
+$form-input-w: 250px;
+$form-input-h: 30px;
+$form-input-border: 0;
+$form-input-ps: 4px;
+$form-focus: #b89c00;
+
+$asterisk-color: red;
+$asterisk-font-size: 2rem;
+
+// blog
 
 // Right side section (rs) ----------------
 
@@ -128,9 +150,9 @@ $sub-email-h: 25px;
 $sub-email-m: 10px 0;
 $sub-email-border: none;
 $sub-email-color: black;
-$sub-email-bg-hover: #f8ff9a;
-
+$sub-email-bg-click: #f8ff9a;
 $sub-email-ps: 4px;
+$sub-focus: #b89c00;
 
 $sub-btn-w: 45%;
 $sub-btn-color: #ffffff;
@@ -139,7 +161,6 @@ $sub-btn-hover-bg: #505050;
 $sub-btn-transition: 0.5s ease-in-out;
 
 // Popular posts (pp)
-
 $pp-ul-style: underline;
 $pp-ul-thick: 2px;
 $pp-ul-po: under;

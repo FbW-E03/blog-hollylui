@@ -69,10 +69,10 @@
 
 // hr ------------------
 
-@mixin hr-style($border, $color, $thick, $w, $mb, $style) {
+@mixin hr-style($border, $color, $bt, $w, $mb, $style) {
   border: $border;
   color: $color;
-  height: $thick;
+  border-top: $bt;
   width: $w;
   margin-bottom: $mb;
   border: $style;
@@ -80,13 +80,14 @@
 
 // subscribe ------------------
 
-@mixin email {
-  width: $sub-email-w;
-  border: $sub-email-border;
-  height: $sub-email-h;
-  font-size: $p-rs-font-size;
-  margin: $sub-email-m;
-  padding-left: $sub-email-ps;
+@mixin textarea($color, $w, $border, $h, $font-size, $m, $ps) {
+  color: $color;
+  width: $w;
+  border: $border;
+  height: $h;
+  font-size: $font-size;
+  margin: $m;
+  padding-left: $ps;
 }
 
 @mixin button(
