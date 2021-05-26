@@ -24,8 +24,7 @@ body {
   color: $body-color;
 }
 
-
-abbr{
+abbr {
   text-decoration-color: $abbr-color !important;
   text-decoration-thickness: $abbr-thick !important;
   cursor: pointer !important;
@@ -40,28 +39,32 @@ nav {
   align-items: baseline;
   padding: 15px;
 
-    a {
-      @include anchor ($body-color, $nav-a-font-size, $nav-a-font-pad, $nav-a-deco, none, none);
-      text-transform: $f-upper;
-      font-weight: $nav-a-font-bold;
+  a {
+    @include anchor(
+      $body-color,
+      $nav-a-font-size,
+      $nav-a-font-pad,
+      $nav-a-deco,
+      none,
+      none
+    );
+    text-transform: $f-upper;
+    font-weight: $nav-a-font-bold;
 
-      &:hover {
-        color: $nav-a-hover;
-      }
-    
+    &:hover {
+      color: $nav-a-hover;
     }
+  }
 
-    img{
-      width: $nav-img-w;
-    }
-  
+  img {
+    width: $nav-img-w;
+  }
 
-    .nav-link {
-      color: $body-color;
-      font-size: $body-color;
-    }
+  .nav-link {
+    color: $body-color;
+    font-size: $body-color;
+  }
 }
-
 
 // header - footer -------------------------------
 
@@ -73,47 +76,58 @@ footer {
 
   &,
   section {
-    @include header-footer-center;
+    @include flex-center;
+    flex-direction: column;
   }
 
-  img{
+  img {
     width: 70px;
     padding: 0 10px;
   }
 
-  span{font-size: 1.5rem;}
+  span {
+    font-size: 1.5rem;
+  }
 
-  h2{@include h2;}
+  h2 {
+    @include header(
+      $h2-color,
+      $h2-font-family,
+      $h2-align,
+      $h2-font-size,
+      $f-upper,
+      $h2-letter-space,
+      none
+    );
+    width: $h2-w;
+  }
 
   p {
     font-size: $header-footer-p-font-size;
-    letter-spacing: $header-footer-p-letter-space;  
+    letter-spacing: $header-footer-p-letter-space;
   }
-
-  
 }
-  
-
 
 header {
   background-color: $header-bg;
   padding: $header-pad;
-
 }
 
-footer{
+footer {
   background-color: $footer-bg;
-  h2{color: #a8a8a8;}
+  h2 {
+    color: #a8a8a8;
+  }
 
-  hr{
-    @include hr-style($footer-hr-border, $footer-color, $footer-hr-h, $footer-hr-w, $footer-hr-mb);
+  hr {
+    @include hr-style(none, $footer-hr-color, 3px, 100%, 0, solid);
     margin-top: 30px;
-    }
+  }
 
-  .copyright{
+  .copyright {
     width: 100%;
-    
-    p{
+
+    p {
       margin: 0;
       text-align: center;
       line-height: 60px;
@@ -121,281 +135,275 @@ footer{
   }
 }
 
-
 // sub-menu ------------------------------------
 
-section[class^="submenu"]{
+section[class^="submenu"] {
   background-color: $sub-menu-bg;
   height: $sub-menu-h;
 
-    div[class="container"] {
+  div[class="container"] {
+    @include flex-center;
 
-      @include flex-center;
+    div[class^="dropdown"] {
+      a {
+        @include anchor(
+          $sub-menu-color,
+          $sub-menu-font-size,
+          $sub-menu-pad,
+          none,
+          none,
+          none
+        );
 
-      div[class^="dropdown"] {
-
-        a {
-          
-          @include anchor ( $sub-menu-color, $sub-menu-font-size, $sub-menu-pad, none,none, none);
-          
-          &:hover{
+        &:hover {
           color: $sub-menu-hover-color;
-          }
         }
       }
     }
   }
-
+}
 
 // cards ---------------------------------------
-.cards{
+.cards {
   margin: $cards-m;
 
-  div[class="col-8"]{
-    .top-padding{
-      height:$card-top-pad;
-    };
+  div[class="col-8"] {
+    .top-padding {
+      height: $card-top-pad;
+    }
 
-    div{
+    div {
       margin: $card-m;
       position: relative;
 
       h3 {
-        font-size: $h3-main-font-size;
+        @include header(
+          $h3-color,
+          $h3-font-family,
+          none,
+          $h3-card-font-size,
+          none,
+          none,
+          none
+        );
         margin: $card-h3-margin;
-        font-family: $h3-font-family;
         font-weight: $card-h3-weight;
         line-height: $card-h3-line-h;
-        color: $card-h3-color;
       }
 
       a {
-        @include anchor ($h3-color, $h3-font-size, 0, $card-a-style, none, none);
-
+        @include anchor($h3-color, $h3-font-size, 0, $card-a-style, none, none);
 
         &:hover {
-          @include anchor ($h3-color, $h3-font-size, 0, $card-a-ul-style, $card-a-ul-po, none);
+          text-decoration: $card-a-ul-style;
           text-decoration-thickness: $card-a-ul-thick;
         }
-      } 
+      }
 
       .card-img {
-        @include image-animation(
-          $card-img-w,
-          $card-img-blur,
-          $card-img-origin,
-          $card-img-transition
+        @include image(
+          100%,
+          auto,
+          none,
+          1,
+          1.025,
+          filter 1s ease-in-out,
+          cover
         );
 
-        object-fit: cover;
-
-          &:hover {
-            filter: grayscale($card-img-blur-hover);
-            transition: $card-img-transition;
-
-          }
+        &:hover {
+          filter: grayscale(0);
+        }
       }
-
-
-      
-
 
       p {
-        font-size: $card-p-font-size;
+        font-size: $p-font-size;
         text-align: $card-p-align;
-        color: $card-p-color;
-
       }
 
-      button{
+      button {
         position: absolute;
         right: 10px;
-        @include button ($card-btn-bg, $card-btn-color, $card-btn-border, $card-btn-radius, $card-btn-w, $card-btn-h, $card-btn-m, $card-btn-font-size);
+        @include button(
+          $card-btn-bg,
+          $body-color,
+          $card-btn-border,
+          $card-btn-radius,
+          $card-btn-w,
+          $card-btn-h,
+          $card-btn-m,
+          $p-font-size
+        );
         transition: $card-btn-transition;
 
-        &:hover{
+        &:hover {
           background-color: $card-btn-hover-bg;
           color: $card-btn-hover-color;
-          transition: $card-btn-transition;
         }
       }
     }
   }
+}
 
-
- }
-
- .carousel-item{
-   transition: transform 5s ease !important;
- }
+.carousel-item {
+  transition: transform 5s ease !important;
+}
 
 // Right side (rs) section ----------------------
 
-.latest_posts,
+.pop_posts,
 .social,
 .subscribe,
 .about {
   @include flex-center;
+  flex-direction: column;
   margin: $rs-m;
   border: $rs-border;
-  flex-direction: column;
-  
+
   h4 {
-    text-align: $h4-align;
-    font-size: $h4-font-size;
-    text-transform: $h4-transform;
-    color: $h4-color;
-    padding-top: $h4-pt;
+    @include header(
+      $h4-color,
+      $body-family,
+      $rs-align,
+      $h4-font-size,
+      $f-upper,
+      none,
+      $rs-pt 0 0 0
+    );
   }
 
-  hr{
-    @include hr-style($hr-border, $hr-color, $hr-h, $hr-w, $hr-mb);
-  }
-  
-  h5{
-    font-size: $h5-font-size;
-    font-family: $h5-font-family;
-    font-weight: $h5-weight;
-    text-transform: $h5-transform;
-    padding: $h5-pad;
-    color: $h5-color;
-    text-align: $h5-align;
+  hr {
+    @include hr-style(none, #ff0000, 2px, 20%, 15px, solid);
   }
 
+  p {
+    font-size: $p-rs-font-size;
+    text-align: $rs-align;
 
-  p { 
-    font-size: $rs-p-font-size;
-    text-align: $rs-p-align;
+    a {
+      @include anchor(
+        $rs-a-color,
+        $p-rs-font-size,
+        none,
+        none,
+        $rs-a-ul-po,
+        $rs-a-skip-ink
+      );
+      font-weight: $rs-font-weight;
 
-    a{
-      text-decoration: $rs-a-dec;
-      &:link,
-      &:active,
-      &:visited{
-        color: $rs-a-color;
-        font-weight: 700;
-      }
-
-
-      &:hover{
-        @include a-link($rs-a-hover, $rs-a-ul-po, $rs-a-skip-ink);
+      &:hover {
+        text-decoration: $rs-a-hover;
       }
     }
-    
   }
 
-  
-    
-  .carousel-item{
+  // carousel
+  .carousel-item {
     transition: transform 5s ease;
   }
-
-  
 }
 
-.subscribe{
-  height: $subscribe-h;
-  background-color: $subscribe-bg;
+// subscribe
+.subscribe {
+  height: $sub-h;
+  background-color: $sub-bg;
 
-  form{
+  form {
     text-align: center;
-    
 
-    input[type="email"]{
+    input[type="email"] {
       @include email;
-    
+      color: $sub-email-color;
 
-      &:focus{
+      &:focus {
         outline: none;
-        background-color: #f3f3f3;
+        background-color: $sub-email-bg-hover;
       }
     }
 
-    input[type="submit"]{
-      @include button ($sub-btn-bg, $sub-btn-c,$sub-email-border, $sub-btn-border-radius, $sub-btn-w, $sub-email-h, $sub-email-m, $sub-email-font-size);
+    input[type="submit"] {
+      @include button(
+        $rs-color,
+        $sub-btn-color,
+        $sub-email-border,
+        $sub-btn-border-radius,
+        $sub-btn-w,
+        $sub-email-h,
+        $sub-email-m,
+        $p-rs-font-size
+      );
       transition: $sub-btn-transition;
 
-      &:hover{
+      &:hover {
         background-color: $sub-btn-hover-bg;
-        color: $sub-btn-hover-color;
-        transition: $sub-btn-transition;
-      
       }
     }
   }
-
 }
 
-.social{
+// Social media
+.social {
   height: 150px;
-  
-  div{
+
+  div {
     display: flex;
-  flex-direction: row;
-  a{
-    padding: 10px;
-    img{
-      width: 16px;
+    flex-direction: row;
+    a {
+      padding: 10px;
+      img {
+        width: 16px;
+      }
     }
   }
 }
-}
 
-.latest_posts{
+// Popular posts
+.pop_posts {
   padding-bottom: 10px;
-  div{
-    div{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      
-      
-      img{
-       width: 40%;
-       padding: 5px 0;
-     }
+  div {
+    div {
+      @include flex-center;
 
-    div{
-      
-      font-size: 1.3rem;
-       width: 60%;
-       padding-left: 5px;
-       text-align: left;
-       text-overflow: ellipsis;
+      img {
+        width: 40%;
+        padding: 5px 0;
+      }
 
-       &:hover{
-         @include a-link($pp-color $pp-ul-style $pp-ul-thick, $pp-ul-po, $pp-skip-ink);
-       }
-       
-     }
+      div {
+        font-size: $pp-font-size;
+        width: 60%;
+        padding-left: $pp-pad;
+        text-align: left;
+        text-overflow: ellipsis;
+
+        &:hover {
+          @include anchor(
+            $rs-color,
+            $pp-font-size,
+            $pp-pad,
+            $pp-ul-style,
+            $pp-ul-po,
+            $pp-skip-ink
+          );
+        }
+      }
     }
   }
-  
 }
-
-
-
 
 // Back to top --------------------------
 
-.backtotop{
+.backtotop {
   background-color: $btt-bg;
   padding: $btt-pad;
   bottom: 0;
-  div{
-    @include btt-div(flex, 0 auto, $btt-w-h, $btt-w-h, $btt-border, $btt-border-radius, $btt-center, $btt-center);
-        
-    a {
-      p{
-        
-        margin: 0;
-        padding-bottom: 3px;
-      @include btt-p ($btt-p-size-lh, $btt-p-size-lh,$btt-p-color, $btt-p-bold, $btt-p-align );
 
-    }
+  div {
+    @include btt-div;
+
+    p {
+      @include btt-p;
+      vertical-align: middle;
     }
   }
 }
-
-
-

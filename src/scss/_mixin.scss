@@ -10,19 +10,26 @@
 // $t-align - text align
 // $t-transform - text transform
 // $letter-space - letter spacing
-// $blur - filter grayscale 
+// $blur - filter grayscale
 // $scale - transform scale
 // $transition - transition
 
+// @mixin image-animation($w, $blur, $scale, $transition) {
+//   width: $w;
+//   filter: grayscale($blur);
+//   transform: scale($scale);
+//   transition: $transition;
+// }
 
-
-@mixin image-animation ($w, $blur, $scale, $transition) {
+@mixin image($w, $h, $m, $blur, $scale, $transition, $object-fit) {
   width: $w;
+  height: $h;
+  margin: $m;
   filter: grayscale($blur);
   transform: scale($scale);
   transition: $transition;
+  object-fit: $object-fit;
 }
-
 
 @mixin flex-center {
   display: flex;
@@ -31,108 +38,92 @@
   align-items: center;
 }
 
-@mixin a-link($text-dec, $text-ul-po, $text-skip-ink){
-
-  text-decoration: $text-dec;
-  text-underline-position: $text-ul-po;
-  text-decoration-skip-ink: $text-skip-ink;
-}
-
-
-@mixin anchor ($color, $font-size, $pad, $t-deco, $t-ul-po, $t-skip-ink){
+@mixin anchor($color, $font-size, $pad, $t-deco, $t-ul-po, $t-skip-ink) {
   color: $color;
   font-size: $font-size;
   padding: $pad;
-  text-decoration:$t-deco;
+  text-decoration: $t-deco;
   text-underline-position: $t-ul-po;
   text-decoration-skip-ink: $t-skip-ink;
 }
 
+// heading ------------------------
 
-
-
-
-// header ------------------------
-@mixin h2 {
-  width: $h2-w;
-  color: $h2-color;
-  font-family: $h2-font-family;
-  text-align: $h2-align;
-  font-size: $h2-font-size;
-  text-transform: $f-upper;
-  letter-spacing: $h2-letter-space;
+@mixin header(
+  $color,
+  $t-family,
+  $t-align,
+  $font-size,
+  $t-transform,
+  $letter-space,
+  $pad
+) {
+  color: $color;
+  font-family: $t-family;
+  text-align: $t-align;
+  font-size: $font-size;
+  text-transform: $t-transform;
+  letter-spacing: $letter-space;
+  padding: $pad;
 }
 
-@mixin h3{
-  font-size: $h3-font-size;
-  color: $h3-color;
-  font-family: $h3-font-family;
-  padding: 40px 0 10px 0;
-  letter-spacing: 10px;
+// hr ------------------
+
+@mixin hr-style($border, $color, $thick, $w, $mb, $style) {
+  border: $border;
+  color: $color;
+  height: $thick;
+  width: $w;
+  margin-bottom: $mb;
+  border: $style;
 }
 
-@mixin header-footer-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+// subscribe ------------------
 
-
-
-// Cards ------------------------
-// image 
-
-
-
-// about me ------------------
-
-@mixin hr-style($hr-border, $hr-color, $hr-h, $hr-w, $hr-mb){
-  border:$hr-border;
-  color:$hr-color;
-  height: $hr-h;
-  width: $hr-w;
-  margin-bottom: $hr-mb;
-}
-
-@mixin email{
+@mixin email {
   width: $sub-email-w;
   border: $sub-email-border;
   height: $sub-email-h;
-  font-size: $sub-email-font-size;
+  font-size: $p-rs-font-size;
   margin: $sub-email-m;
-  padding-left: $email-ps;
-
+  padding-left: $sub-email-ps;
 }
 
-@mixin button ($bg, $btn-color, $border, $border-radius, $w, $h, $m, $font-size){
+@mixin button(
+  $bg,
+  $btn-color,
+  $border,
+  $border-radius,
+  $w,
+  $h,
+  $m,
+  $font-size
+) {
   background: $bg;
-  color:$btn-color;
+  color: $btn-color;
   border: $border;
   border-radius: $border-radius;
   width: $w;
   height: $h;
   margin: $m;
   font-size: $font-size;
-  
 }
 
 // back to top ---------------------
-@mixin btt-div($display, $m, $w, $h, $border, $border-radius, $justify, $align){
-  display: $display;
-  margin: $m;
-  width: $w;
-  height: $h;
-  border: $border;
-  border-radius: $border-radius;
-  justify-content: $justify;
-  align-items: $align;
+@mixin btt-div {
+  display: flex;
+  margin: auto;
+  width: $btt-w-h;
+  height: $btt-w-h;
+  border: $btt-border;
+  border-radius: $btt-border-radius;
+  justify-content: $btt-center;
+  align-items: $btt-center;
 }
 
-@mixin btt-p ($font-size, $line-height, $color, $font-weight, $align){
-  font-size: $font-size;
-  line-height: $line-height;
-  color: $color;
-  font-weight: $font-weight;
-  align-items: $align;
+@mixin btt-p {
+  font-size: $btt-font-size;
+  color: $btt-color;
+  font-weight: $btt-bold;
+  align-items: $btt-align;
 }
