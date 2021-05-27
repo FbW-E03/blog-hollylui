@@ -10779,6 +10779,17 @@ nav .nav-link {
   font-size: #585858;
 }
 
+h2, .h2 {
+  color: #020202;
+  font-family: "Nanum Myeongjo", serif;
+  text-align: center;
+  font-size: 8rem;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  padding: none;
+  width: 360px;
+}
+
 header,
 footer {
   height: 300px;
@@ -10803,18 +10814,6 @@ footer img {
 header span,
 footer span {
   font-size: 1.5rem;
-}
-header h2, header .h2,
-footer h2,
-footer .h2 {
-  color: #020202;
-  font-family: "Nanum Myeongjo", serif;
-  text-align: center;
-  font-size: 8rem;
-  text-transform: uppercase;
-  letter-spacing: 2rem;
-  padding: none;
-  width: 360px;
 }
 header p,
 footer p {
