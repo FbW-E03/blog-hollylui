@@ -47,6 +47,15 @@
   text-decoration-skip-ink: $t-skip-ink;
 }
 
+@mixin blockquote($w, $color, $bg, $pad, $t-align, $m) {
+  width: $w;
+  text-align: $t-align;
+  color: $color;
+  margin: $m;
+  padding: $pad;
+  background-color: $bg;
+}
+
 // heading ------------------------
 
 @mixin header(
@@ -69,13 +78,10 @@
 
 // hr ------------------
 
-@mixin hr-style($border, $color, $bt, $w, $mb, $style) {
-  border: $border;
-  color: $color;
-  border-top: $bt;
+@mixin hr-style($style, $w, $mb) {
+  border: $style;
   width: $w;
   margin-bottom: $mb;
-  border: $style;
 }
 
 // subscribe ------------------

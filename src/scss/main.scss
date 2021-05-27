@@ -30,6 +30,50 @@ abbr {
   cursor: pointer !important;
 }
 
+.asterisk {
+  color: $asterisk-color;
+  font-size: $asterisk-font-size;
+}
+
+// heading -----------------------------------
+
+h2 {
+  @include header(
+    $h2-color,
+    $h2-font-family,
+    $h2-align,
+    $h2-font-size,
+    $f-upper,
+    $h2-letter-space,
+    none
+  );
+  width: $h2-w;
+}
+
+h3 {
+  @include header(
+    $h3-color,
+    $h3-font-family,
+    left,
+    $h3-font-size,
+    none,
+    2.5px,
+    15px 0 10px 0
+  );
+}
+
+h4 {
+  @include header(
+    $h4-color,
+    $body-family,
+    $rs-align,
+    $h4-font-size,
+    $f-upper,
+    none,
+    $rs-pt 0 0 0
+  );
+}
+
 // navbar --------------------------------
 
 nav {
@@ -64,19 +108,6 @@ nav {
     color: $body-color;
     font-size: $body-color;
   }
-}
-
-h2 {
-  @include header(
-    $h2-color,
-    $h2-font-family,
-    $h2-align,
-    $h2-font-size,
-    $f-upper,
-    $h2-letter-space,
-    none
-  );
-  width: $h2-w;
 }
 
 // header - footer -------------------------------
@@ -120,7 +151,7 @@ footer {
   }
 
   hr {
-    @include hr-style(none, $footer-hr-color, 3px, 100%, 0, solid);
+    @include hr-style(3px $footer-hr-color solid, 100%, 0);
     margin-top: 30px;
   }
 
@@ -165,13 +196,9 @@ section[class^="submenu"] {
 
 // content ---------------------------------------
 
+// cards content
 .content {
   margin: $cards-m;
-
-  .asterisk {
-    color: $asterisk-color;
-    font-size: $asterisk-font-size;
-  }
 
   p {
     font-size: $p-font-size;
@@ -179,38 +206,32 @@ section[class^="submenu"] {
   }
 
   div[class="col-8"] {
-    .top-padding {
-      height: $card-top-pad;
-    }
-
     div {
       margin: $card-m;
       position: relative;
 
-      h3 {
-        @include header(
-          $h3-color,
-          $h3-font-family,
+      a {
+        @include anchor(
+          $h3-color!important,
           none,
-          $h3-card-font-size,
+          0,
           none,
-          none,
+          $card-a-ul-po,
           none
         );
-        margin: $card-h3-margin;
-        font-weight: $card-h3-weight;
-        line-height: $card-h3-line-h;
-      }
-
-      a {
-        @include anchor($h3-color, $h3-font-size, 0, $card-a-style, none, none);
 
         &:hover {
-          text-decoration: $card-a-ul-style;
+          text-decoration: $card-a-ul;
           text-decoration-thickness: $card-a-ul-thick;
+        }
+
+        h3 {
+          font-weight: $card-h3-weight !important;
+          font-size: $h3-content-font-size !important;
         }
       }
 
+      // card image
       .card-img {
         @include image(
           100%,
@@ -227,7 +248,8 @@ section[class^="submenu"] {
         }
       }
 
-      p ~ button {
+      // read more button
+      button {
         position: absolute;
         right: 10px;
         @include button(
@@ -252,10 +274,6 @@ section[class^="submenu"] {
   }
 }
 
-.carousel-item {
-  transition: transform 5s ease !important;
-}
-
 // Right side (rs) section ----------------------
 
 .pop_posts,
@@ -267,30 +285,18 @@ section[class^="submenu"] {
   margin: $rs-m;
   border: $rs-border;
 
-  h4 {
-    @include header(
-      $h4-color,
-      $body-family,
-      $rs-align,
-      $h4-font-size,
-      $f-upper,
-      none,
-      $rs-pt 0 0 0
-    );
-  }
-
   hr {
-    @include hr-style(none, #ff0000, 1px, 25%, 20px, solid);
+    @include hr-style(2px solid red, 20%, 15px);
   }
 
   p {
-    font-size: $p-rs-font-size;
+    font-size: $rs-p-font-size;
     text-align: $rs-align;
 
     a {
       @include anchor(
-        $rs-a-color,
-        $p-rs-font-size,
+        $rs-color,
+        $rs-p-font-size,
         none,
         none,
         $rs-a-ul-po,
@@ -302,11 +308,6 @@ section[class^="submenu"] {
         text-decoration: $rs-a-hover;
       }
     }
-  }
-
-  // carousel
-  .carousel-item {
-    transition: transform 5s ease;
   }
 }
 
@@ -324,7 +325,7 @@ section[class^="submenu"] {
         $sub-email-w,
         $sub-email-border,
         $sub-email-h,
-        $p-rs-font-size,
+        $rs-p-font-size,
         $sub-email-m,
         $sub-email-ps
       );
@@ -344,7 +345,7 @@ section[class^="submenu"] {
         $sub-btn-w,
         $sub-email-h,
         $sub-email-m,
-        $p-rs-font-size
+        $rs-p-font-size
       );
       transition: $sub-btn-transition;
 

@@ -14,11 +14,10 @@ $h3-font-family: "Newsreader", serif;
 $h1-font-size: 1rem;
 $h2-font-size: 8rem;
 $h3-font-size: 5rem;
-$h3-card-font-size: 2.5rem;
-$h3-assignment-font-size: 3rem;
+$h3-content-font-size: 2.5rem;
+
 $h4-font-size: 1.6rem;
 $p-font-size: 1.6rem;
-$p-rs-font-size: 1.4rem;
 
 // font color ------------------------
 $body-color: #585858;
@@ -26,7 +25,6 @@ $h2-color: #020202;
 $h3-color: #b89c00;
 $h3-assignment: #020202;
 $h4-color: #020202;
-$q-color: #313131;
 
 // navbar ----------------------------
 $nav-a-font-size: 1.4rem;
@@ -74,7 +72,7 @@ $dropdown-box-shadow: red;
 // cards
 $card-top-pad: 15px;
 $card-color: #b89c00;
-$cards-m: 10px 0;
+$cards-m: 20px 0 10px 0;
 
 $card-h3-margin: 15px 0;
 $card-h3-weight: 500;
@@ -84,9 +82,9 @@ $card-h3-font-family: "Newsreader", serif;
 $card-a-style: none;
 $card-a-skip-ink: none;
 $card-a-color: $card-color;
-$card-a-ul-style: underline;
+$card-a-ul: underline;
 $card-a-ul-po: under;
-$card-a-ul-thick: 4px;
+$card-a-ul-thick: 3px;
 
 $card-m: 0 0 30px 0;
 
@@ -135,11 +133,11 @@ $rs-align: center;
 $rs-pt: 15px;
 $rs-font-weight: 700;
 $rs-color: #b89c00;
+$rs-p-font-size: 1.4rem;
 
-$rs-a-color: black;
 $rs-a-hover: underline double $rs-color;
 $rs-a-ul-po: under;
-$rs-a-skip-ink: auto;
+$rs-a-skip-ink: none;
 
 // subscribe (sub)
 $sub-bg: #c8e7e18f;

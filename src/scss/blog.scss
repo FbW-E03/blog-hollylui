@@ -3,50 +3,36 @@
 @import "./mixin";
 @import "./variables";
 
-// iframe -----------------------
-.iframes {
-  iframe {
-    width: 681px;
-    height: 1300px;
+.blog {
+  .blog-title {
+    @include header(
+      black!important,
+      "Newsreader" serif,
+      none,
+      3.25rem,
+      uppercase,
+      10px,
+      25px 0 10px 0
+    );
+    text-align: center;
   }
 }
 
 .blog-bg {
   width: 80% !important;
-  padding: 10px 0;
   border: 2px dotted #cfcfcf;
-  h3 {
-    @include header(
-      $h3-color,
-      $h3-font-family,
-      none,
-      $h3-font-size,
-      none,
-      10px,
-      5px 0 5px 0!important
-    );
-    margin: 0 !important;
-  }
 
   p {
     margin: 5px 0 !important;
   }
 
-  h4 ~ p img,
-  h3 ~ p ~ img {
-    @include image(100%, 400px, 0, 0, 1, none, contain);
+  img:nth-child(1),
+  img:nth-child(3) {
+    @include image(100%, 400px, 10px 0!important, 0, 1, none, contain);
   }
 
   h4 {
-    @include header(
-      $h4-color,
-      $body-family,
-      $rs-align,
-      $h4-font-size,
-      $f-upper,
-      none,
-      $rs-pt 0 0 0
-    );
+    font-size: 2.5rem;
     text-align: left;
   }
 
@@ -54,25 +40,14 @@
     text-align: left !important;
   }
 
-  .blog-title {
-    @include header(
-      $h3-assignment!important,
-      $h3-font-family,
-      none,
-      $h3-assignment-font-size,
-      $f-upper!important,
-      10px,
-      40px 0 10px 0
-    );
-    text-align: left;
-  }
-
   blockquote {
-    width: 70%;
-    color: white !important;
-    background-color: #b89c00;
-    padding: 10px 20px !important;
-    text-align: justify;
-    margin: 20px auto !important;
+    @include blockquote(
+      80%,
+      white,
+      #b89c00,
+      10px 20px,
+      center,
+      20px auto!important
+    );
   }
 }
