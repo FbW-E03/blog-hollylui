@@ -66,6 +66,19 @@ nav {
   }
 }
 
+h2 {
+  @include header(
+    $h2-color,
+    $h2-font-family,
+    $h2-align,
+    $h2-font-size,
+    $f-upper,
+    $h2-letter-space,
+    none
+  );
+  width: $h2-w;
+}
+
 // header - footer -------------------------------
 
 header,
@@ -87,19 +100,6 @@ footer {
 
   span {
     font-size: 1.5rem;
-  }
-
-  h2 {
-    @include header(
-      $h2-color,
-      $h2-font-family,
-      $h2-align,
-      $h2-font-size,
-      $f-upper,
-      $h2-letter-space,
-      none
-    );
-    width: $h2-w;
   }
 
   p {

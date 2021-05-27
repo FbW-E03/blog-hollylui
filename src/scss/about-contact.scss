@@ -1,0 +1,196 @@
+// This is where you can import other stylesheets or write your scss code
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./mixin";
+@import "./variables";
+
+// font type
+// font-family: 'Karla', sans-serif;
+// font-family: 'Nanum Myeongjo', serif;
+// font-family: 'Newsreader', serif;
+
+div[class="sticky-top"] {
+  background-color: #ffffff;
+}
+
+hr {
+  @include hr-style(none, $footer-hr-color, 2px!important, 100%, 10px, solid);
+}
+
+.col-8 {
+  h3 {
+    @include header(
+      $h3-color,
+      $h3-font-family,
+      none,
+      $h3-font-size,
+      none,
+      10px,
+      40px 0 10px 0
+    );
+  }
+
+  div {
+    font-size: $p-font-size;
+    width: 100%;
+
+    img {
+      @include image(100%, 400px, none, 1, cover, none, cover);
+    }
+
+    p {
+      font-family: "Karla", sans-serif;
+      margin: 20px 0;
+    }
+
+    blockquote {
+      margin: auto;
+      padding: 5px 80px;
+      line-height: 3rem;
+      color: $q-color;
+
+      ul {
+        padding: 0 10px 0 30px;
+        list-style-type: none;
+        border-left: 3px solid #dadada;
+
+        li {
+          margin: 10px 0;
+
+          a {
+            font-size: $p-font-size !important;
+            color: #b89c00 !important;
+            font-weight: 700;
+            text-decoration-thickness: 3px !important;
+          }
+        }
+      }
+    }
+  }
+
+  //   Assignment, Programs & Form -------------------------
+  .form,
+  .programs,
+  .assignment {
+    @include header(
+      $h3-assignment,
+      $h3-font-family,
+      none,
+      $h3-assignment-font-size,
+      $f-upper,
+      10px,
+      40px 0 10px 0
+    );
+  }
+
+  // Assignment
+
+  .exercises {
+    text-align: center;
+
+    .exercises-container {
+      display: inline-block;
+      position: relative;
+      width: 180px !important;
+      height: 180px !important;
+      margin: 15px !important;
+
+      img {
+        @include image(100%, 100%, none, 1, 1, 0.5s ease-in-out, cover);
+      }
+
+      .know-more {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        line-height: 30px;
+        background-color: #b89c00;
+        color: white !important;
+        width: 100px;
+        height: 30px;
+        font-size: 1.3rem !important;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+          background-color: rgb(53, 53, 53);
+          color: rgb(221, 221, 221) !important;
+          text-decoration: none !important;
+        }
+      }
+
+      &:hover img {
+        opacity: 0.5;
+        filter: grayscale(0);
+      }
+
+      &:hover .know-more {
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+
+  // Programs
+  .language {
+    text-align: center;
+
+    img {
+      @include image(80px, auto, 20px 55px, 1, 1, 1s ease-in-out, cover);
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+}
+
+// Form--------------------------------------------
+form {
+  justify-items: center;
+  input {
+    @include textarea(
+      $form-input-color,
+      $form-input-w,
+      $form-input-border,
+      $form-input-h,
+      $p-font-size,
+      0,
+      $form-input-ps
+    );
+  }
+  textarea {
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    border: 1px solid #cfcfcf;
+
+    &:focus {
+      outline: 0;
+      border: 1px solid $form-focus;
+    }
+  }
+
+  button {
+    @include button(
+      white,
+      $body-color,
+      1px solid $btn-border,
+      $btn-radius,
+      $btn-w,
+      $form-btn-h,
+      0 $btn-m 0 0,
+      $btn-font-size
+    );
+    transition: $btn-transition;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $form-btn-hover-bg;
+      color: $form-btn-hover-color;
+    }
+  }
+}
