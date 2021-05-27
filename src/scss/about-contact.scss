@@ -12,10 +12,6 @@ div[class="sticky-top"] {
   background-color: #ffffff;
 }
 
-hr {
-  @include hr-style(none, $footer-hr-color, 2px!important, 100%, 10px, solid);
-}
-
 .col-8 {
   div {
     font-size: $p-font-size;

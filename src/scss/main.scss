@@ -200,15 +200,50 @@ section[class^="submenu"] {
 .content {
   margin: $cards-m;
 
-  p {
-    font-size: $p-font-size;
-    text-align: $card-p-align;
-  }
-
   div[class="col-8"] {
-    div {
-      margin: $card-m;
-      position: relative;
+    .card-hover {
+      & img {
+        filter: grayscale(1);
+        transition: filter 0.5s ease-in-out;
+      }
+
+      &:hover img {
+        filter: grayscale(0);
+      }
+
+      .pt-4 {
+        margin: $card-m;
+      }
+
+      p {
+        position: relative;
+        font-size: $p-font-size;
+        text-align: $card-p-align;
+        height: 120px;
+
+        button {
+          position: absolute;
+          bottom: 0;
+          right: 10px;
+          @include button(
+            $btn-bg,
+            $body-color,
+            $card-btn-border,
+            $btn-radius,
+            $btn-w,
+            $btn-h,
+            $btn-m,
+            $btn-font-size
+          );
+          text-transform: uppercase;
+          transition: $btn-transition;
+
+          &:hover {
+            background-color: $card-btn-hover-bg;
+            color: $card-btn-hover-color;
+          }
+        }
+      }
 
       a {
         @include anchor(
@@ -228,46 +263,6 @@ section[class^="submenu"] {
         h3 {
           font-weight: $card-h3-weight !important;
           font-size: $h3-content-font-size !important;
-        }
-      }
-
-      // card image
-      .card-img {
-        @include image(
-          100%,
-          auto,
-          none,
-          1,
-          1.025,
-          filter 1s ease-in-out,
-          cover
-        );
-
-        &:hover {
-          filter: grayscale(0);
-        }
-      }
-
-      // read more button
-      button {
-        position: absolute;
-        right: 10px;
-        @include button(
-          $btn-bg,
-          $body-color,
-          $card-btn-border,
-          $btn-radius,
-          $btn-w,
-          $btn-h,
-          $btn-m,
-          $btn-font-size
-        );
-        text-transform: uppercase;
-        transition: $btn-transition;
-
-        &:hover {
-          background-color: $card-btn-hover-bg;
-          color: $card-btn-hover-color;
         }
       }
     }

@@ -4,50 +4,94 @@
 @import "./variables";
 
 .blog {
-  .blog-title {
-    @include header(
-      black!important,
-      "Newsreader" serif,
-      none,
-      3.25rem,
-      uppercase,
-      10px,
-      25px 0 10px 0
-    );
-    text-align: center;
+  div {
+    padding: 12px 0;
+  }
+
+  .blog-bg {
+    width: 90% !important;
+    border: 2px dotted #cfcfcf;
+
+    .blog-title {
+      @include header(
+        black!important,
+        "Newsreader" serif,
+        none,
+        3.25rem,
+        uppercase,
+        10px,
+        25px 0 5px 0px
+      );
+
+      &,
+      & + p {
+        text-align: center;
+      }
+    }
+
+    img ~ p {
+      text-align: left;
+      margin: 10px 10px !important;
+    }
+
+    img:nth-child(1),
+    img:nth-child(3) {
+      @include image(100%, 400px, 10px 0!important, 0, 1, none, cover);
+    }
+
+    h4 {
+      padding-left: 35px;
+      font-size: 2.5rem;
+      text-align: left;
+    }
+
+    ul {
+      margin-left: 20px;
+      text-align: left !important;
+      border: 0 !important;
+
+      li {
+        list-style: square;
+        border: 0 !important;
+      }
+    }
+
+    blockquote {
+      @include blockquote(
+        60%,
+        white,
+        #b89c00,
+        10px 20px,
+        justify,
+        20px auto!important
+      );
+    }
+
+    .backtotop {
+      background-color: $body-bg;
+      div {
+        border: none;
+
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
   }
 }
 
-.blog-bg {
-  width: 80% !important;
-  border: 2px dotted #cfcfcf;
-
-  p {
-    margin: 5px 0 !important;
+@media screen and (min-width: 0px) {
+  .blog {
+    h3 {
+      font-size: 1.6rem !important;
+    }
   }
+}
 
-  img:nth-child(1),
-  img:nth-child(3) {
-    @include image(100%, 400px, 10px 0!important, 0, 1, none, contain);
-  }
-
-  h4 {
-    font-size: 2.5rem;
-    text-align: left;
-  }
-
-  ul {
-    text-align: left !important;
-  }
-
-  blockquote {
-    @include blockquote(
-      80%,
-      white,
-      #b89c00,
-      10px 20px,
-      center,
-      20px auto!important
-    );
+@media screen and (min-width: 576px) {
+  .blog {
+    h3 {
+      font-size: 2.5rem !important;
+    }
   }
 }
