@@ -32,8 +32,9 @@
     margin: 5px 0 !important;
   }
 
+  h4 ~ p img,
   h3 ~ p ~ img {
-    @include image(100%, 400px, 0, 0, 1, none, cover);
+    @include image(100%, 400px, 0, 0, 1, none, contain);
   }
 
   h4 {
@@ -48,26 +49,30 @@
     );
     text-align: left;
   }
-}
 
-.blog-title {
-  @include header(
-    $h3-assignment!important,
-    $h3-font-family,
-    none,
-    $h3-assignment-font-size,
-    $f-upper!important,
-    10px,
-    40px 0 10px 0
-  );
-  text-align: left;
-}
+  ul {
+    text-align: left !important;
+  }
 
-blockquote {
-  width: 70%;
-  color: white !important;
-  background-color: #b89c00;
-  padding: 10px 20px !important;
-  text-align: justify;
-  margin: 20px auto !important;
+  .blog-title {
+    @include header(
+      $h3-assignment!important,
+      $h3-font-family,
+      none,
+      $h3-assignment-font-size,
+      $f-upper!important,
+      10px,
+      40px 0 10px 0
+    );
+    text-align: left;
+  }
+
+  blockquote {
+    width: 70%;
+    color: white !important;
+    background-color: #b89c00;
+    padding: 10px 20px !important;
+    text-align: justify;
+    margin: 20px auto !important;
+  }
 }

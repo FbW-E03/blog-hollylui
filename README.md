@@ -1,5 +1,7 @@
 # DCI Boilerplate I: Sass + bootstrap
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/079374fd-7f5c-4d68-9223-89f80f841d1e/deploy-status)](https://app.netlify.com/sites/holly-blog/deploys)
+
 An HTML CSS boilerplate with built-in sass support:
 
 - Automatic [Sass](https://sass-lang.com/) transpilation
