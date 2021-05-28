@@ -30,11 +30,6 @@ abbr {
   cursor: pointer !important;
 }
 
-.asterisk {
-  color: $asterisk-color;
-  font-size: $asterisk-font-size;
-}
-
 // heading -----------------------------------
 
 h2 {
@@ -100,8 +95,15 @@ nav {
     }
   }
 
+  .anchor-blur:hover {
+    img {
+      transform: rotate(360deg);
+    }
+  }
+
   img {
     width: $nav-img-w;
+    transition: 0.7s ease-in-out;
   }
 
   .nav-link {
@@ -168,28 +170,34 @@ footer {
 
 // sub-menu ------------------------------------
 
-section[class^="submenu"] {
+.sub-menu-bg {
   background-color: $sub-menu-bg;
-  height: $sub-menu-h;
 
-  div[class="container"] {
-    @include flex-center;
+  button {
+    margin-left: 10px;
+    border: 0;
 
-    div[class^="dropdown"] {
-      a {
-        @include anchor(
-          $sub-menu-color,
-          $sub-menu-font-size,
-          $sub-menu-pad,
-          none,
-          none,
-          none
-        );
+    &:focus {
+      box-shadow: none;
+      border: 0;
+    }
+  }
 
-        &:hover {
-          color: $sub-menu-hover-color;
-        }
-      }
+  div[id="navbarNavDropdown"] {
+    justify-content: center;
+  }
+
+  a {
+    padding: $sub-menu-pad;
+    &[class="dropdown-item"] {
+      text-transform: none;
+    }
+    &:hover {
+      color: $sub-menu-hover-color;
+    }
+
+    &:focus {
+      background-color: transparent !important;
     }
   }
 }
