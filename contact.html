@@ -90,8 +90,15 @@
                   </div>
 
                   <div class="col">
-                    <label for="subject">Subject</label><br />
-                    <input type="text" id="subject" name="subject" />
+                    <label for="subject"
+                      >Subject<span class="asterisk"></span></label
+                    ><br />
+                    <input
+                      type="subject"
+                      id="subject"
+                      name="subject"
+                      required
+                    />
                   </div>
 
                   <div class="row">
@@ -120,13 +127,7 @@
       </section>
 
       <!-- back to top at the bottom -->
-      <section class="backtotop position-sticky">
-        <div>
-          <a href="#backtotop">
-            <p>&#9650;</p>
-          </a>
-        </div>
-      </section>
+      <div data-include="backtotop.html"></div>
 
       <!-- footer -->
 

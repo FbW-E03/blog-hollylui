@@ -10751,6 +10751,37 @@ abbr {
   cursor: pointer !important;
 }
 
+h2, .h2 {
+  color: #020202;
+  font-family: "Nanum Myeongjo", serif;
+  text-align: center;
+  font-size: 8rem;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  padding: none;
+  width: 360px;
+}
+
+h3, .h3 {
+  color: #b89c00;
+  font-family: "Newsreader", serif;
+  text-align: left;
+  font-size: 5rem;
+  text-transform: none;
+  letter-spacing: 2.5px;
+  padding: 15px 0 10px 0;
+}
+
+h4, .h4 {
+  color: #020202;
+  font-family: "Karla", sans-serif;
+  text-align: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: none;
+  padding: 15px 0 0 0;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -10771,23 +10802,16 @@ nav a {
 nav a:hover {
   color: #ff0000;
 }
+nav .anchor-blur:hover img {
+  transform: rotate(360deg);
+}
 nav img {
   width: 17px;
+  transition: 0.7s ease-in-out;
 }
 nav .nav-link {
   color: #585858;
   font-size: #585858;
-}
-
-h2, .h2 {
-  color: #020202;
-  font-family: "Nanum Myeongjo", serif;
-  text-align: center;
-  font-size: 8rem;
-  text-transform: uppercase;
-  letter-spacing: 2rem;
-  padding: none;
-  width: 360px;
 }
 
 header,
@@ -10833,12 +10857,9 @@ footer h2, footer .h2 {
   color: #a8a8a8;
 }
 footer hr {
-  border: none;
-  color: #a8a8a8;
-  border-top: 3px;
+  border: 3px #a8a8a8 solid;
   width: 100%;
   margin-bottom: 0;
-  border: solid;
   margin-top: 30px;
 }
 footer .copyright {
@@ -10850,84 +10871,55 @@ footer .copyright p {
   line-height: 60px;
 }
 
-section[class^=submenu] {
+.sub-menu-bg {
   background-color: #c8e7e1;
-  height: 40px;
 }
-section[class^=submenu] div[class=container] {
-  display: flex;
-  flex-wrap: nowrap;
+.sub-menu-bg button {
+  margin-left: 10px;
+  border: 0;
+}
+.sub-menu-bg button:focus {
+  box-shadow: none;
+  border: 0;
+}
+.sub-menu-bg div[id=navbarNavDropdown] {
   justify-content: center;
-  align-items: center;
 }
-section[class^=submenu] div[class=container] div[class^=dropdown] a {
-  color: #585858;
-  font-size: 1.5rem;
-  padding: 8px 15px;
-  text-decoration: none;
-  text-underline-position: none;
-  text-decoration-skip-ink: none;
+.sub-menu-bg a {
+  padding: 5px 25px !important;
 }
-section[class^=submenu] div[class=container] div[class^=dropdown] a:hover {
-  color: red;
+.sub-menu-bg a[class=dropdown-item] {
+  text-transform: none;
+}
+.sub-menu-bg a:hover {
+  color: red !important;
+}
+.sub-menu-bg a:focus {
+  background-color: transparent !important;
 }
 
 .content {
-  margin: 10px 0;
+  margin: 20px 0 10px 0;
 }
-.content .asterisk {
-  color: red;
-  font-size: 2rem;
-}
-.content p {
-  font-size: 1.6rem;
-  text-align: left;
-}
-.content div[class=col-8] .top-padding {
-  height: 15px;
-}
-.content div[class=col-8] div {
-  margin: 0 0 30px 0;
-  position: relative;
-}
-.content div[class=col-8] div h3, .content div[class=col-8] div .h3 {
-  color: #b89c00;
-  font-family: "Newsreader", serif;
-  text-align: none;
-  font-size: 2.5rem;
-  text-transform: none;
-  letter-spacing: none;
-  padding: none;
-  margin: 15px 0;
-  font-weight: 500;
-  line-height: 30px;
-}
-.content div[class=col-8] div a {
-  color: #b89c00;
-  font-size: 5rem;
-  padding: 0;
-  text-decoration: none;
-  text-underline-position: none;
-  text-decoration-skip-ink: none;
-}
-.content div[class=col-8] div a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 4px;
-}
-.content div[class=col-8] div .card-img {
-  width: 100%;
-  height: auto;
-  margin: none;
+.content div[class=col-8] .card-hover img {
   filter: grayscale(1);
-  transform: scale(1.025);
-  transition: filter 1s ease-in-out;
-  object-fit: cover;
+  transition: filter 0.5s ease-in-out;
 }
-.content div[class=col-8] div .card-img:hover {
+.content div[class=col-8] .card-hover:hover img {
   filter: grayscale(0);
 }
-.content div[class=col-8] div p ~ button {
+.content div[class=col-8] .card-hover .pt-4 {
+  margin: 0px 0 30px 0;
+}
+.content div[class=col-8] .card-hover p {
+  position: relative;
+  font-size: 1.6rem;
+  text-align: left;
+  height: 120px;
+}
+.content div[class=col-8] .card-hover p button {
   position: absolute;
+  bottom: 0;
   right: 10px;
   background: #ffffff;
   color: #585858;
@@ -10935,18 +10927,30 @@ section[class^=submenu] div[class=container] div[class^=dropdown] a:hover {
   border-radius: 0;
   width: 100px;
   height: 25px;
-  margin: 5px;
+  margin: 10px 5px 0 0;
   font-size: 1.2rem;
   text-transform: uppercase;
   transition: 0.25s ease-in-out;
 }
-.content div[class=col-8] div p ~ button:hover {
+.content div[class=col-8] .card-hover p button:hover {
   background-color: #b89c00;
   color: #ffffff;
 }
-
-.carousel-item {
-  transition: transform 5s ease !important;
+.content div[class=col-8] .card-hover a {
+  color: #b89c00 !important;
+  font-size: none;
+  padding: 0;
+  text-decoration: none;
+  text-underline-position: under;
+  text-decoration-skip-ink: none;
+}
+.content div[class=col-8] .card-hover a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+.content div[class=col-8] .card-hover a h3, .content div[class=col-8] .card-hover a .h3 {
+  font-weight: 500 !important;
+  font-size: 2.5rem !important;
 }
 
 .pop_posts,
@@ -10961,31 +10965,13 @@ section[class^=submenu] div[class=container] div[class^=dropdown] a:hover {
   margin: 10px;
   border: 1px solid #e2e2e2;
 }
-.pop_posts h4, .pop_posts .h4,
-.social h4,
-.social .h4,
-.subscribe h4,
-.subscribe .h4,
-.about h4,
-.about .h4 {
-  color: #020202;
-  font-family: "Karla", sans-serif;
-  text-align: center;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  letter-spacing: none;
-  padding: 15px 0 0 0;
-}
 .pop_posts hr,
 .social hr,
 .subscribe hr,
 .about hr {
-  border: none;
-  color: #ff0000;
-  border-top: 1px;
-  width: 25%;
-  margin-bottom: 20px;
-  border: solid;
+  border: 2px solid red;
+  width: 20%;
+  margin-bottom: 15px;
 }
 .pop_posts p,
 .social p,
@@ -10998,12 +10984,12 @@ section[class^=submenu] div[class=container] div[class^=dropdown] a:hover {
 .social p a,
 .subscribe p a,
 .about p a {
-  color: black;
+  color: #b89c00;
   font-size: 1.4rem;
   padding: none;
   text-decoration: none;
   text-underline-position: under;
-  text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: none;
   font-weight: 700;
 }
 .pop_posts p a:hover,
@@ -11011,12 +10997,6 @@ section[class^=submenu] div[class=container] div[class^=dropdown] a:hover {
 .subscribe p a:hover,
 .about p a:hover {
   text-decoration: underline double #b89c00;
-}
-.pop_posts .carousel-item,
-.social .carousel-item,
-.subscribe .carousel-item,
-.about .carousel-item {
-  transition: transform 5s ease;
 }
 
 .subscribe {
@@ -11098,7 +11078,7 @@ section[class^=submenu] div[class=container] div[class^=dropdown] a:hover {
 }
 
 .backtotop {
-  background-color: #c8e7e1ee;
+  background-color: #c8e7e1;
   padding: 10px 0;
   bottom: 0;
 }

@@ -10733,27 +10733,15 @@ div[class=sticky-top] {
   background-color: #ffffff;
 }
 
-hr {
-  border: none;
-  color: #a8a8a8;
-  border-top: 2px !important;
-  width: 100%;
-  margin-bottom: 10px;
-  border: solid;
+p {
+  font-size: 1.6rem;
 }
 
-.col-8 h3, .col-8 .h3 {
-  color: #b89c00;
-  font-family: "Newsreader", serif;
-  text-align: none;
-  font-size: 5rem;
-  text-transform: none;
-  letter-spacing: 10px;
-  padding: 40px 0 10px 0;
-}
 .col-8 div {
-  font-size: 1.6rem;
   width: 100%;
+}
+.col-8 div p {
+  margin: 20px 0 !important;
 }
 .col-8 div img {
   width: 100%;
@@ -10764,52 +10752,59 @@ hr {
   transition: none;
   object-fit: cover;
 }
-.col-8 div p {
-  font-family: "Karla", sans-serif;
-  margin: 20px 0;
-}
 .col-8 div blockquote {
+  width: 100%;
+  text-align: none;
+  color: #313131;
   margin: auto;
   padding: 5px 80px;
-  line-height: 3rem;
-  color: #313131;
+  background-color: none;
+  font-size: 1.6rem;
 }
-.col-8 div blockquote ul {
+.col-8 div ul {
   padding: 0 10px 0 30px;
   list-style-type: none;
   border-left: 3px solid #dadada;
 }
-.col-8 div blockquote ul li {
+.col-8 div ul li {
   margin: 10px 0;
 }
-.col-8 div blockquote ul li a {
+.col-8 div ul li a {
+  color: #b89c00;
   font-size: 1.6rem !important;
-  color: #b89c00 !important;
-  font-weight: 700;
+  padding: none;
+  text-decoration: none;
+  text-underline-position: under;
+  text-decoration-skip-ink: none;
   text-decoration-thickness: 3px !important;
 }
-.col-8 .form,
-.col-8 .programs,
-.col-8 .assignment {
+.col-8 div ul li a:hover {
+  text-decoration: underline;
+}
+
+.form,
+.programs,
+.assignment {
   color: #020202;
   font-family: "Newsreader", serif;
   text-align: none;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 10px;
   padding: 40px 0 10px 0;
 }
-.col-8 .exercises {
+
+.exercises {
   text-align: center;
 }
-.col-8 .exercises .exercises-container {
+.exercises .exercises-container {
   display: inline-block;
   position: relative;
   width: 180px !important;
   height: 180px !important;
   margin: 15px !important;
 }
-.col-8 .exercises .exercises-container img {
+.exercises .exercises-container img {
   width: 100%;
   height: 100%;
   margin: none;
@@ -10818,13 +10813,14 @@ hr {
   transition: 0.5s ease-in-out;
   object-fit: cover;
 }
-.col-8 .exercises .exercises-container .know-more {
+.exercises .exercises-container .know-more {
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  text-decoration: none !important;
   line-height: 30px;
   background-color: #b89c00;
   color: white !important;
@@ -10833,49 +10829,52 @@ hr {
   font-size: 1.3rem !important;
   transition: 0.5s ease-in-out;
 }
-.col-8 .exercises .exercises-container .know-more:hover {
+.exercises .exercises-container .know-more:hover {
   background-color: #353535;
   color: #dddddd !important;
-  text-decoration: none !important;
 }
-.col-8 .exercises .exercises-container:hover img {
+.exercises .exercises-container:hover img {
   opacity: 0.5;
   filter: grayscale(0);
 }
-.col-8 .exercises .exercises-container:hover .know-more {
+.exercises .exercises-container:hover .know-more {
   opacity: 1;
   transition: 0.5s ease-in-out;
 }
-.col-8 .language {
+
+.language {
   text-align: center;
 }
-.col-8 .language img {
-  width: 80px;
-  height: auto;
+.language img {
+  width: 10% !important;
+  height: 10% !important;
   margin: 20px 55px;
   filter: grayscale(1);
   transform: scale(1);
-  transition: 1s ease-in-out;
+  transition: filter 1s ease-in-out !important;
   object-fit: cover;
 }
-.col-8 .language img:hover {
+.language img:hover {
   filter: grayscale(0%);
 }
 
+.asterisk {
+  color: red;
+  font-size: 2rem;
+}
+
 form {
-  justify-items: center;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
 }
 form input {
   color: #000000;
-  width: 250px;
+  width: 100%;
   border: 0;
   height: 30px;
   font-size: 1.6rem;
   margin: 0;
   padding-left: 4px;
-}
-form textarea {
-  width: 100%;
 }
 form input,
 form textarea {
@@ -10893,7 +10892,7 @@ form button {
   border-radius: 0;
   width: 100px;
   height: 30px;
-  margin: 0 5px 0 0;
+  margin: 10px 5px 0 0;
   font-size: 1.2rem;
   transition: 0.25s ease-in-out;
   text-transform: uppercase;
