@@ -446,6 +446,18 @@ footer {
     }
   }
 
+  div[class="card-hover"] {
+    border: 1px solid #d8d8d8;
+    overflow: hidden;
+    p {
+      height: 190px !important;
+      button {
+        right: 0 !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
   .col-8 {
     h3 {
       font-size: 2rem;
@@ -455,7 +467,7 @@ footer {
   .blog {
     h3 {
       font-size: 1.6rem !important;
-      letter-spacing: 0.3rem !important;
+      letter-spacing: 0.2rem !important;
     }
   }
 }
