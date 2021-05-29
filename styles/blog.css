@@ -10792,15 +10792,4 @@ textarea.form-control-lg {
   background-color: #b89c00;
 }
 
-@media screen and (min-width: 0px) {
-  .blog h3, .blog .h3 {
-    font-size: 1.6rem !important;
-  }
-}
-@media screen and (min-width: 576px) {
-  .blog h3, .blog .h3 {
-    font-size: 2.5rem !important;
-  }
-}
-
 /*# sourceMappingURL=blog.css.map */

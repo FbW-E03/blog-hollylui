@@ -10743,13 +10743,21 @@ p {
 .col-8 div p {
   margin: 20px 0 !important;
 }
-.col-8 div img {
+.col-8 div .img-container {
+  position: relative;
   width: 100%;
-  height: 400px;
-  margin: none;
-  filter: grayscale(1);
-  transform: scale(cover);
-  transition: none;
+  padding-top: 50%;
+  margin: auto;
+}
+.col-8 div .img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .col-8 div blockquote {
