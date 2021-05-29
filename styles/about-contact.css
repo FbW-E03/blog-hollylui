@@ -10856,7 +10856,7 @@ p {
 .language img {
   width: 10% !important;
   height: 10% !important;
-  margin: 20px 55px;
+  margin: 10px;
   filter: grayscale(1);
   transform: scale(1);
   transition: filter 1s ease-in-out !important;
