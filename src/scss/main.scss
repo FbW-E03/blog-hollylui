@@ -429,3 +429,47 @@ footer {
     }
   }
 }
+
+@media screen and (min-width: 0px) and (max-width: 575.98px) {
+  footer,
+  header {
+    h2 {
+      font-size: 4.5rem !important;
+    }
+
+    img {
+      width: 50px !important;
+      margin-top: 10px !important;
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  .col-8 {
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  .blog {
+    h3 {
+      font-size: 1.6rem !important;
+      letter-spacing: 0.3rem !important;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .blog {
+    h3 {
+      font-size: 2.5rem !important;
+      letter-spacing: 0.5rem !important;
+    }
+  }
+  .col-8 {
+    h3 {
+      font-size: 3.5rem;
+    }
+  }
+}
