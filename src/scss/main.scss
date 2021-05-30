@@ -270,7 +270,8 @@ footer {
 
         h3 {
           font-weight: $card-h3-weight !important;
-          font-size: $h3-content-font-size !important;
+          font-size: $h3-content-font-size;
+          hyphens: auto;
         }
       }
     }
@@ -434,7 +435,8 @@ footer {
   footer,
   header {
     h2 {
-      font-size: 4.5rem !important;
+      font-size: 4rem !important;
+      margin-left: 15px;
     }
 
     img {
@@ -448,9 +450,9 @@ footer {
 
   div[class="card-hover"] {
     border: 1px solid #d8d8d8;
-    overflow: hidden;
+
     p {
-      height: 190px !important;
+      height: 220px !important;
       button {
         right: 0 !important;
         margin: 0 !important;
@@ -460,7 +462,8 @@ footer {
 
   .col-8 {
     h3 {
-      font-size: 2rem;
+      font-size: 2rem !important;
+      hyphens: auto;
     }
   }
 
@@ -468,6 +471,7 @@ footer {
     h3 {
       font-size: 1.6rem !important;
       letter-spacing: 0.2rem !important;
+      hyphens: auto;
     }
   }
 }
@@ -477,11 +481,13 @@ footer {
     h3 {
       font-size: 2.5rem !important;
       letter-spacing: 0.5rem !important;
+      hyphens: auto;
     }
   }
   .col-8 {
     h3 {
       font-size: 3.5rem;
+      hyphens: auto;
     }
   }
 }
