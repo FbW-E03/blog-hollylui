@@ -10950,7 +10950,8 @@ footer .copyright p {
 }
 .content div[class=col-8] .card-hover a h3, .content div[class=col-8] .card-hover a .h3 {
   font-weight: 500 !important;
-  font-size: 2.5rem !important;
+  font-size: 2.5rem;
+  hyphens: auto;
 }
 
 .pop_posts,
@@ -11107,7 +11108,8 @@ footer .copyright p {
   footer h2, footer .h2,
 header h2,
 header .h2 {
-    font-size: 4.5rem !important;
+    font-size: 4rem !important;
+    margin-left: 15px;
   }
   footer img,
 header img {
@@ -11121,10 +11123,9 @@ header p {
 
   div[class=card-hover] {
     border: 1px solid #d8d8d8;
-    overflow: hidden;
   }
   div[class=card-hover] p {
-    height: 190px !important;
+    height: 220px !important;
   }
   div[class=card-hover] p button {
     right: 0 !important;
@@ -11132,22 +11133,26 @@ header p {
   }
 
   .col-8 h3, .col-8 .h3 {
-    font-size: 2rem;
+    font-size: 2rem !important;
+    hyphens: auto;
   }
 
   .blog h3, .blog .h3 {
     font-size: 1.6rem !important;
     letter-spacing: 0.2rem !important;
+    hyphens: auto;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
   .blog h3, .blog .h3 {
     font-size: 2.5rem !important;
     letter-spacing: 0.5rem !important;
+    hyphens: auto;
   }
 
   .col-8 h3, .col-8 .h3 {
     font-size: 3.5rem;
+    hyphens: auto;
   }
 }
 
